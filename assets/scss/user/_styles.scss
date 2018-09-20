@@ -1,1 +1,44 @@
 // Add your custom styles below
+// header
+
+
+// Footer
+.footer-light {
+  position: relative;
+  font-size: 0.8rem;
+  .heading {
+		transform: rotate(-90deg) translateX(-47%);
+		text-align: right;
+		left: 0;
+		position: absolute;
+		font-weight: normal;
+		font-size: .9rem;
+		color: $primary;
+		text-transform: uppercase;
+	}
+	.footer-links{
+		margin-left: 35px;
+		line-height: 1.4;
+	}
+  .footer-bottom {
+    overflow: visible;
+    max-height: 70px;
+    padding-top: 10px;
+
+    span {
+      display: block;
+      margin-right: 9px;
+    }
+    a {
+			margin-right: 9px;
+			color: $white;
+    }
+    .jovey {
+      vertical-align: bottom;
+      position: relative;
+      height: auto;
+      width: 100%;
+      bottom: 0;
+		}
+  }
+}

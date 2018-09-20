@@ -1,14 +1,22 @@
-// Copy and paste the variables that you want to modify from _variables.scss and remove the !default flad. 
+// Copy and paste the variables that you want to modify from _variables.scss and remove the !default flad.
 // The default ones will be overridden. Below we added the most wanted variables that a user needs to change.
 // Uncomment the variables starting with "$" that you want to edit.
 
 
 // Colors
 
-// $primary: #f00;
-// $secondary: #234242;
+$primary: #ED1C24;
+$secondary: #35ABBC;
+$darkGray: #6D6F71;
+$lightGray: #D1D3D4;
+$fadeWhite: #f6f6f6;
+$yellow: #F4A61C;
+$black: #161616;
+$overlayDark: rgba(0,0,0,0.6);
+
 
 // Typography
 
-// $font-family-base: 'Nunito', sans-serif !default;
-// $font-family-alt: 'Nunito', sans-serif !default;
+$font-family-base: 'Roboto', sans-serif;
+$font-family-alt: 'exo', sans-serif;
+

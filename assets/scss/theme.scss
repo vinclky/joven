@@ -16,23 +16,23 @@ Copyright 2018 Webpixels
 @import "bootstrap/functions";
 @import "purpose/functions";
 
-@import "user/variables"; 
+@import "user/variables";
 @import "purpose/variables";
-@import "bootstrap/variables"; 
+@import "bootstrap/variables";
 
 
-@import "bootstrap/mixins"; 
+@import "bootstrap/mixins";
 @import "purpose/mixins";
- 
+
 // Bootstrap components
 
-@import "bootstrap/root";
+// @import "bootstrap/root";
 @import "bootstrap/reboot";
 @import "bootstrap/type";
 @import "bootstrap/images";
-@import "bootstrap/code"; 
-@import "bootstrap/grid"; 
-@import "bootstrap/tables"; 
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
 @import "bootstrap/transitions";
@@ -61,7 +61,7 @@ Copyright 2018 Webpixels
 
 // Purpose components
 
-@import "purpose/reboot"; 
+@import "purpose/reboot";
 @import "purpose/global";
 @import "purpose/utilities";
 
@@ -72,7 +72,7 @@ Copyright 2018 Webpixels
 @import "purpose/blurable";
 @import "purpose/breadcrumb";
 @import "purpose/buttons";
-@import "purpose/card"; 
+@import "purpose/card";
 @import "purpose/close";
 @import "purpose/collage";
 @import "purpose/custom-forms";
