@@ -3,7 +3,8 @@
  * Joven Website
  */
 
-var autoprefixer = require("gulp-autoprefixer");
+// var gulpAutoprefixer = require("gulp-autoprefixer");
+var autoprefixer = require("autoprefixer");
 var browserSync = require("browser-sync").create();
 // var csscomb = require("gulp-csscomb");
 var cleanCss = require("gulp-clean-css");
@@ -58,11 +59,10 @@ gulp.task("scss", function() {
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
       // .pipe(postcss([require(postcssFlexBug)]))
-      .pipe(
-        autoprefixer({
-          browsers: ["> 1%"]
-        })
-        )
+      .pipe(postcss([
+        autoprefixer({ browsers: ["> 1%"]  })
+        ])
+      )
         // .pipe(csscomb())
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.src.css))
@@ -99,7 +99,7 @@ gulp.task("sourcemap:js", function() {
   return gulp
     .src([paths.src.base + "/assets/js/theme.js"])
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write(paths.src.maps))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.src.js))
     .pipe(
       browserSync.reload({
@@ -122,7 +122,7 @@ gulp.task("browserSync", function() {
 
 gulp.task("watch", ["browserSync", "scss"], function() {
   gulp.watch(paths.src.scss, ["scss"]);
-  // gulp.watch(paths.src.js, ["sorucemap:js"]);
+  gulp.watch(paths.src.js, browserSync.reload);
   // gulp.watch("./*.html").on('change', browserSync.reload);
   gulp.watch(paths.src.html, browserSync.reload);
 });

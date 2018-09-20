@@ -1,25 +1,116 @@
 // Add your custom styles below
 // header
+.navbar-brand {
+  margin: 0 0.75rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+.navbar-main .offcanvas-collapse {
+  .list-group {
+		margin-bottom: 1.5rem;
+		margin-left: 0.75rem;
+  }
+  .list-link {
+		color: $secondary;
+		line-height: 1.8rem;
+  }
+	hr{
+		margin: .5rem 0;
+		border-bottom: 1px solid $darkGray;
+		width: 70%;
+	}
+}
 
-
+// OffCanvas
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+@include media-breakpoint-down(md) {
+  .navbar {
+    z-index: unset;
+  }
+  .offcanvas-collapse {
+    position: fixed;
+    top: 0; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 80%;
+    padding: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: $white;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: left, visibility, opacity;
+    z-index: 1031;
+  }
+  .offcanvas-collapse.open {
+    left: 20%;
+    box-shadow: 0 20px 20px $overlayDark;
+    visibility: visible;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: left, visibility, opacity;
+  }
+  .body-backdrop.backdrop-canvas {
+    z-index: 1030;
+  }
+}
+// Country
+.country-select {
+  position: relative;
+  .dropdown-menu {
+    padding: 0;
+  }
+  .dropdown-toggle {
+    background: $primary;
+    color: $white;
+    border: none;
+    appearance: none;
+    padding: 12px 20px;
+    display: block;
+    height: 100%;
+    &::after {
+      display: none;
+    }
+  }
+  .flag-icon {
+    width: 32px;
+    height: auto;
+    margin-left: 20px;
+    float: right;
+  }
+  .list-group {
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    .list-group-item {
+      border: none;
+    }
+  }
+}
 // Footer
 .footer-light {
   position: relative;
   font-size: 0.8rem;
   .heading {
-		transform: rotate(-90deg) translateX(-47%);
-		text-align: right;
-		left: 0;
-		position: absolute;
-		font-weight: normal;
-		font-size: .9rem;
-		color: $primary;
-		text-transform: uppercase;
-	}
-	.footer-links{
-		margin-left: 35px;
-		line-height: 1.4;
-	}
+    transform: rotate(-90deg) translateX(-47%);
+    text-align: right;
+    left: 0;
+    position: absolute;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: $primary;
+    text-transform: uppercase;
+  }
+  .footer-links {
+    margin-left: 35px;
+    line-height: 1.4;
+  }
   .footer-bottom {
     overflow: visible;
     max-height: 70px;
@@ -30,8 +121,8 @@
       margin-right: 9px;
     }
     a {
-			margin-right: 9px;
-			color: $white;
+      margin-right: 9px;
+      color: $white;
     }
     .jovey {
       vertical-align: bottom;
@@ -39,6 +130,6 @@
       height: auto;
       width: 100%;
       bottom: 0;
-		}
+    }
   }
 }
