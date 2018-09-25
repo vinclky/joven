@@ -59,11 +59,8 @@ gulp.task("scss", function() {
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
       // .pipe(postcss([require(postcssFlexBug)]))
-      .pipe(postcss([
-        autoprefixer({ browsers: ["> 1%"]  })
-        ])
-      )
-        // .pipe(csscomb())
+      .pipe(postcss([autoprefixer({ browsers: ["> 1%"] })]))
+      // .pipe(csscomb())
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.src.css))
       .pipe(
@@ -81,7 +78,7 @@ gulp.task("minify:css", function() {
     .src([paths.src.css + "/theme.css"])
     .pipe(cleanCss())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(paths.dist.base + "/css"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/css"));
 });
 
 // Minify JS
@@ -91,7 +88,7 @@ gulp.task("minify:js", function(cb) {
     .src([paths.src.base + "/assets/js/theme.js"])
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(paths.dist.base + "/js"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/js"));
 });
 
 //generate sourcemaps JS
@@ -138,7 +135,7 @@ gulp.task("clean:dist", function() {
 gulp.task("copy:css", function() {
   return gulp
     .src([paths.src.base + "/assets/css/theme.css"])
-    .pipe(gulp.dest(paths.dist.base + "/css"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/css"));
 });
 
 // Copy JS
@@ -146,7 +143,18 @@ gulp.task("copy:css", function() {
 gulp.task("copy:js", function() {
   return gulp
     .src([paths.src.base + "/assets/js/theme.js"])
-    .pipe(gulp.dest(paths.dist.base + "/js"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/js"));
+});
+
+//Copy all images and directories
+gulp.task("copy:img", function() {
+  return gulp
+    .src([paths.src.base + "/assets/img/**/*"])
+    .pipe(gulp.dest(paths.dist.base + "/assets/img/"));
+});
+// copy all used html
+gulp.task("copy:html", function() {
+  return gulp.src([paths.src.base + "*.html"]).pipe(gulp.dest(paths.dist.base));
 });
 
 // Build
@@ -157,6 +165,8 @@ gulp.task("build", function(callback) {
     "scss",
     "copy:css",
     "copy:js",
+    "copy:img",
+    "copy:html",
     "minify:js",
     "minify:css",
     callback

@@ -120,4 +120,7 @@ Copyright 2018 Webpixels
 
 // User's styles
 
+@import "user/sections";
+@import "user/components";
 @import "user/styles";
+@import "user/mq";

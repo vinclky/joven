@@ -1,0 +1,17 @@
+// media queries
+@include media-breakpoint-up(sm){
+}
+@include media-breakpoint-up(md){
+}
+@include media-breakpoint-up(lg){
+  .navbar-main .offcanvas-collapse {
+    .dropdown-menu-lg{
+        background: $fadeWhite;
+        display: flex;
+      .list-group {
+        margin: 0;
+        padding: 1.5rem;
+      }
+    }
+  }
+}

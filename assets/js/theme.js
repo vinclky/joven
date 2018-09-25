@@ -7,7 +7,7 @@ Author URI: https://www.webpixels.io
 
 ---
 
-Copyright 2018 Webpixels
+Copyright 2018
 
 */
 
