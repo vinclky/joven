@@ -51,7 +51,6 @@ var paths = {
 };
 
 // Compile SCSS
-
 gulp.task("scss", function() {
   return (
     gulp
@@ -72,7 +71,6 @@ gulp.task("scss", function() {
 });
 
 // Minify CSS
-
 gulp.task("minify:css", function() {
   return gulp
     .src([paths.src.css + "/theme.css"])
@@ -82,7 +80,6 @@ gulp.task("minify:css", function() {
 });
 
 // Minify JS
-
 gulp.task("minify:js", function(cb) {
   return gulp
     .src([paths.src.base + "/assets/js/theme.js"])
@@ -106,7 +103,6 @@ gulp.task("sourcemap:js", function() {
 });
 
 // Live reload
-
 gulp.task("browserSync", function() {
   browserSync.init({
     server: {
@@ -116,22 +112,18 @@ gulp.task("browserSync", function() {
 });
 
 // Watch for changes
-
 gulp.task("watch", ["browserSync", "scss"], function() {
   gulp.watch(paths.src.scss, ["scss"]);
   gulp.watch(paths.src.js, browserSync.reload);
-  // gulp.watch("./*.html").on('change', browserSync.reload);
   gulp.watch(paths.src.html, browserSync.reload);
 });
 
 // Clean
-
 gulp.task("clean:dist", function() {
   return del.sync(paths.dist.base);
 });
 
 // Copy CSS
-
 gulp.task("copy:css", function() {
   return gulp
     .src([paths.src.base + "/assets/css/theme.css"])
@@ -139,7 +131,6 @@ gulp.task("copy:css", function() {
 });
 
 // Copy JS
-
 gulp.task("copy:js", function() {
   return gulp
     .src([paths.src.base + "/assets/js/theme.js"])
@@ -152,13 +143,13 @@ gulp.task("copy:img", function() {
     .src([paths.src.base + "/assets/img/**/*"])
     .pipe(gulp.dest(paths.dist.base + "/assets/img/"));
 });
+
 // copy all used html
 gulp.task("copy:html", function() {
   return gulp.src([paths.src.base + "*.html"]).pipe(gulp.dest(paths.dist.base));
 });
 
 // Build
-
 gulp.task("build", function(callback) {
   runSequence(
     "clean:dist",
@@ -174,7 +165,6 @@ gulp.task("build", function(callback) {
 });
 
 // Default
-
 gulp.task("default", function(callback) {
   runSequence(["scss", "browserSync", "watch"], callback);
 });
