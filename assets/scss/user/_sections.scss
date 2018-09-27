@@ -26,8 +26,11 @@
     width: 70%;
   }
 }
+// backgrounds
+.bg-fadeWhite{
+  background-color: $fadeWhite;
+}
 //Spotlight
-
 .splash-banner {
   overflow: hidden;
   background-size: cover;

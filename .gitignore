@@ -23,6 +23,8 @@ twbsconfig.yml
 # Folders to ignore
 .vscode
 build_ref
+pages
+mockups
 node_modules
 
 # Numerous always-ignore extensions
