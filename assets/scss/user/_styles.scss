@@ -8,6 +8,7 @@ body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
   font-size: 96%;
 }
+
 @include media-breakpoint-down(md) {
   .navbar {
     z-index: unset;
@@ -41,6 +42,15 @@ body {
   }
 }
 
+.rounded{
+  border-radius: 2rem !important;
+}
 
+.custom-checkbox {
+  label{
+    color: $lightBlue;
+    font-weight: bold;
+  }
+}
 
 

@@ -2,6 +2,7 @@
 @include media-breakpoint-up(sm){
 }
 @include media-breakpoint-up(md){
+
 }
 @include media-breakpoint-up(lg){
   .navbar-main .offcanvas-collapse {
@@ -13,5 +14,24 @@
         padding: 1.5rem;
       }
     }
+  }
+
+  .product-listing-hero{
+      position: relative;
+      .list-banner-img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat
+      }
+      .card{
+        &.card-desc{
+          margin: 50px 0;
+          padding-right: 30%;
+          left: 60%;
+        }
+      }
   }
 }
