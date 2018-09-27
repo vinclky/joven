@@ -26,6 +26,8 @@ build_ref
 pages
 mockups
 node_modules
+assets/img/backgrounds
+assets/img/prv
 
 # Numerous always-ignore extensions
 *.diff

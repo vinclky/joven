@@ -16,13 +16,35 @@
     font-weight: normal;
     text-transform: uppercase;
   }
+  &.text-left {
+    &::after {
+      margin: 0.5rem 0;
+    }
+  }
 }
 
 //cards
-.events {
-  .card {
-    margin: 0.6rem 0;
-    min-height: 300px;
+
+
+.card-img-overlay {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .heading {
+    color: $white;
+  }
+  .card-content {
+    color: $white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    .heading {
+      font-size: 2rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 .card {
@@ -55,32 +77,36 @@
     }
   }
 }
-.card-img-overlay {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  .heading {
-    color: $white;
-  }
-  .card-content {
-    padding-top: 60px;
-    color: $white;
-  }
-}
+
+
 // warranty card
 .warranty-call {
-  .heading {
-    font-size: 2rem;
-    padding: 50% 0.75rem;
-    @include media-breakpoint-up(lg) {
-      font-size: 1.6rem
-    }
-  }
+  min-height: 250px;
 }
 // button
 .btn-secondary {
   color: $primary;
 }
-.btn{
+.btn {
   box-shadow: 0px 3px 9px $lightGray;
+}
+// product-select
+
+.product-select {
+  text-align: center;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  span {
+    display: block;
+    color: $primary;
+    text-transform: capitalize;
+    line-height: 1.2rem;
+    font-size: 0.75rem;
+  }
+  a {
+    img {
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,134 @@
+
+// header
+.navbar-main {
+  background: $white;
+}
+.navbar-brand {
+  margin: 0 0.75rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 22px 0.3rem;
+  height: 100%;
+  display: block;
+  border: none;
+}
+.navbar-main .offcanvas-collapse {
+  .list-group {
+    margin-bottom: 1.5rem;
+    margin-left: 0.75rem;
+  }
+  .list-link {
+    color: $lightBlue;
+    line-height: 1.8rem;
+  }
+  hr {
+    margin: 0.5rem 0;
+    border-bottom: 1px solid $darkGray;
+    width: 70%;
+  }
+}
+// backgrounds
+.bg-fadeWhite {
+  background-color: $fadeWhite;
+}
+//Spotlight
+.splash-banner {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  .hero-title {
+    padding: 120px 0;
+    h2 {
+      background-color: $primary;
+      color: $white;
+      font-size: 1.6rem;
+      padding: 0.75rem;
+      font-weight: bold;
+      border-bottom-right-radius: 2rem;
+    }
+  }
+}
+// Country
+.country-select {
+  position: relative;
+  .dropdown-menu {
+    padding: 0;
+  }
+  .dropdown-toggle {
+    background: $primary;
+    color: $white;
+    border: none;
+    appearance: none;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+    height: 100%;
+    cursor: pointer;
+    &::after {
+      display: none;
+    }
+    &:hover {
+      background-color: darken(theme-color("primary"), 9%);
+    }
+  }
+  .flag-icon {
+    width: 24px;
+    height: auto;
+    margin-left: 20px;
+    float: right;
+  }
+  .list-group {
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    .list-group-item {
+      border: none;
+    }
+  }
+}
+// Footer
+.footer-light {
+  position: relative;
+  font-size: 0.8rem;
+  .link-label {
+    transform: rotate(-90deg) translateX(-47%);
+    text-align: right;
+    left: 0;
+    position: absolute;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: $primary;
+    text-transform: uppercase;
+  }
+  .footer-links {
+    margin-left: 35px;
+    line-height: 1.4;
+  }
+}
+.footer-bottom {
+  padding-top: 15px;
+  align-items: flex-end;
+  display: flex;
+  max-height: 80px;
+  span {
+    margin-right: 9px;
+  }
+  .footer-text {
+    font-size: 0.8rem;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+  a {
+    margin-right: 9px;
+    color: $white;
+  }
+  .footer-logo {
+    bottom: 0;
+    align-self: end;
+    right: 0;
+    overflow: visible;
+    @include media-breakpoint-up(sm) {
+      width: 100%;
+    }
+  }
+}
