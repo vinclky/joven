@@ -1,16 +1,3 @@
-/*
-
-Theme: Purpose - Website UI Kit
-Product Page: https://themes.getbootstrap.com/product/purpose-website-ui-kit/
-Author: Jaziel
-Author URI: https://www.webpixels.io
-
----
-
-Copyright 2018
-
-*/
-
 "use strict";
 $(window).on("load resize", function() {
   // Background image holder - Static hero with fullscreen autosize

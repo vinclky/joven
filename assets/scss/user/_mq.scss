@@ -1,14 +1,30 @@
 // media queries
-@include media-breakpoint-up(sm){
+@include media-breakpoint-up(sm) {
 }
-@include media-breakpoint-up(md){
-
+@include media-breakpoint-up(md) {
+  .product-listing-hero {
+    position: relative;
+    .list-banner-img {
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+      .card-desc {
+        width: 80%;
+        margin-top: -20%;
+        z-index: 4;
+      }
+      .card-choose{
+        z-index: 5;
+      }
+  }
 }
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .navbar-main .offcanvas-collapse {
-    .dropdown-menu-lg{
-        background: $fadeWhite;
-        display: flex;
+    .dropdown-menu-lg {
+      background: $fadeWhite;
+      display: flex;
       .list-group {
         margin: 0;
         padding: 1.5rem;
@@ -16,22 +32,19 @@
     }
   }
 
-  .product-listing-hero{
-      position: relative;
-      .list-banner-img{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat
-      }
-      .card{
-        &.card-desc{
-          margin: 50px 0;
-          padding-right: 30%;
-          left: 60%;
-        }
+  .product-listing-hero {
+    // margin-bottom: -60px;
+    z-index: 6;
+    background-color: transparent;
+    min-height: 330px;
+    .list-banner-img{
+      position: absolute;
+      background-size: cover;
+    }
+      .card-desc {
+        margin: 30px 0;
+        padding-right: 20%;
+        left: 60%;
       }
   }
 }

@@ -59,12 +59,20 @@
   .list-banner-img{
     border-bottom-left-radius: .8rem;
     border-bottom-right-radius: .8rem;
-  }
-    .card-choose{
-      position: relative;
-      z-index: 5;
+    height: 0;
+    padding-top: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
   }
   .card-desc{
-    z-index: 4;
+    z-index: 5;
+    margin: -30px auto;
   }
+  .card-choose{
+    position: relative;
+    z-index: 4;
+    margin-bottom: -30px;
+}
 }

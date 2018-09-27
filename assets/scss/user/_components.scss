@@ -34,7 +34,8 @@
   &.card-desc{
     position: relative;
     width: 90%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     p{
       margin: 0;
     }
@@ -114,9 +115,7 @@
 .warranty-call {
   min-height: 250px;
 }
-.card-desc{
 
-}
 .card-choose{
   min-height: 250px;
 }
@@ -128,7 +127,6 @@
   box-shadow: 0px 3px 9px $lightGray;
 }
 // product-select
-
 .product-select {
   text-align: center;
   margin-top: 0;
@@ -147,3 +145,30 @@
     }
   }
 }
+
+.breadcrumb{
+  border-bottom: 1px solid $lightGray;
+}
+.product-info{
+  border-bottom: 1px solid $lightGray;
+  .product-desc{
+    border-bottom: 1px solid $lightGray;
+    padding-bottom: .75rem;
+  }
+  .product-points{
+    margin-bottom: .8rem;
+    .product-title-point{
+      color: $lightBlue;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: .75rem;
+    }
+    .col{
+      border-right: 1px solid $lightGray;
+      &:last-of-type{
+        border-right: none;
+      }
+    }
+  }
+}
+
