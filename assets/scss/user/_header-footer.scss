@@ -55,20 +55,23 @@
     padding: 0;
   }
   .dropdown-toggle {
-    background: $primary;
-    color: $white;
+    background: $fadeWhite;
+    color: $black;
     border: none;
     appearance: none;
     text-transform: uppercase;
     padding: 20px;
     display: block;
     height: 100%;
+    transition:  all linear .3s;
     cursor: pointer;
     &::after {
       display: none;
     }
     &:hover {
-      background-color: darken(theme-color("primary"), 9%);
+      background: $primary;
+      transition:  all linear .3s;
+      color: $white;
     }
   }
   .flag-icon {

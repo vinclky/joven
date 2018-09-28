@@ -76,3 +76,33 @@
     margin-bottom: -30px;
 }
 }
+
+// Warranty Form
+
+// about
+.award-list{
+  margin-top: 10px;
+  h6{
+    color: $primary;
+  }
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+    }
+  }
+}
+.projects{
+  .country-name{
+    margin-bottom: 20px;
+    color: $lightBlue;
+  }
+  ul{
+    padding: 0px;
+    li{
+      list-style: none;
+      padding-left: 20px;
+          border-left: 2px solid $primary;
+    }
+  }
+}

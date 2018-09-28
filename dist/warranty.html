@@ -30,216 +30,368 @@
 </head>
 
 <body>
-    <header class="header" id="header-main">
-      <!-- Search -->
-      <div id="search-main" class="navbar-search">
-        <div class="container">
-          <!-- Search form -->
-          <form class="navbar-search-form" role="form">
-            <div class="form-group">
-              <div class="input-group input-group-transparent">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input type="text" class="form-control" placeholder="Type and hit enter ...">
+  <header class="header" id="header-main">
+    <!-- Search -->
+    <div id="search-main" class="navbar-search">
+      <div class="container">
+        <!-- Search form -->
+        <form class="navbar-search-form" role="form">
+          <div class="form-group">
+            <div class="input-group input-group-transparent">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
               </div>
+              <input type="text" class="form-control" placeholder="Type and hit enter ...">
             </div>
-          </form>
-          <div class="navbar-search-suggestions">
-            <h6>Search Our Prodcts</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a class="list-link" href="#">
-                      <span>Instant Heaters</span> in Instant Water Heaters
-                    </a>
-                  </li>
-                  <li>
-                    <a class="list-link" href="#">
-                      <span>Celling Fans</span> in Homes
-                    </a>
-                  </li>
-                  <li>
-                    <a class="list-link" href="#">
-                      <span>i90</span> in Water Heaters
-                    </a>
-                  </li>
-                  <li>
-                    <a class="list-link" href="#">
-                      <span>JH 15 HE</span> in Storage Water Heaters
-                    </a>
-                  </li>
+          </div>
+        </form>
+        <div class="navbar-search-suggestions">
+          <h6>Search Our Prodcts</h6>
+          <div class="row">
+            <div class="col-sm-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="list-link" href="#">
+                    <span>Instant Heaters</span> in Instant Water Heaters
+                  </a>
+                </li>
+                <li>
+                  <a class="list-link" href="#">
+                    <span>Celling Fans</span> in Homes
+                  </a>
+                </li>
+                <li>
+                  <a class="list-link" href="#">
+                    <span>i90</span> in Water Heaters
+                  </a>
+                </li>
+                <li>
+                  <a class="list-link" href="#">
+                    <span>JH 15 HE</span> in Storage Water Heaters
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-light navbar-main navbar-expand-lg navbar-fixed-top" id="navbar-main">
+      <div class="container">
+        <!-- Mobile togglers btn -->
+        <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- logo -->
+        <a class="navbar-brand" href="">
+          <img src="assets/img/static/dark.png" style="height: 50px;">
+          <img class="d-none d-sm-inline" src="assets/img/static/35years.png" style="height: 50px;">
+        </a>
+
+        <!-- main Nav -->
+        <div class="navbar-collapse offcanvas-collapse" id="offcanvas">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu dropdown-menu-lg">
+                <ul class="list-group">
+                  <h6 class="list-title">Water Heaters</h6>
+                  <a href="#" class="list-link">Instant Water Heaters</a>
+                  <a href="#" class="list-link">Storage Water Heaters</a>
+                  <a href="#" class="list-link">Multipoint Heaters</a>
+                  <a href="#" class="list-link">Domestic Water Pumps</a>
+                </ul>
+                <ul class="list-group">
+                  <h6 class="list-title">Home</h6>
+                  <a href="#" class="list-link">Water Purifier</a>
+                  <a href="#" class="list-link">Celling Fans</a>
+                </ul>
+                <!-- <div class="img-switch"><img src="assets/img/static/" alt=""></div> -->
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="">Promotions</a>
+            </li>
+            <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+              <div class="dropdown-menu dropdown-menu-lg">
+                <ul class="list-group">
+                  <h6 class="list-title">For Homes</h6>
+                  <a href="#" class="list-link">E-warranty</a>
+                  <a href="#" class="list-link">Request for Services</a>
+                  <hr>
+                  <a href="#" class="list-link">FAQ</a>
+                  <a href="#" class="list-link">Instalation Guide</a>
+                </ul>
+                <ul class="list-group">
+                  <h6 class="list-title">For Businesses</h6>
+                  <a href="#" class="list-link">Project Services</a>
+                  <a href="#" class="list-link">Product Maintenance</a>
+                  <a href="#" class="list-link">Training Services</a>
+                  <hr>
+                  <a href="#" class="list-link">FAQ</a>
+                  <a href="#" class="list-link">Instalation Guide</a>
                 </ul>
               </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Search icon -->
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-action="search-open" data-target="#search-main"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- country-select -->
+        <div class="dropdown country-select" data-toggle="hover">
+          <div class="dropdown-toggle" role="button" id="countrySelect" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Malaysia</span>
+            <img class="flag-icon" src="./assets/img/icons/flags/malaysia.svg">
+          </div>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="countrySelect">
+            <div class="list-group">
+              <a class="list-group-item list-group-item-action" href="#">Malaysia <img class="flag-icon" src="./assets/img/icons/flags/malaysia.svg"></a>
+              <a class="list-group-item list-group-item-action" href="#">Thailand <img class="flag-icon" src="./assets/img/icons/flags/thailand.svg"></a>
+              <a class="list-group-item list-group-item-action active" href="#">Singapore <img class="flag-icon" src="./assets/img/icons/flags/singapore.svg"></a>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- navbar -->
-      <nav class="navbar navbar-light navbar-main navbar-expand-lg navbar-fixed-top" id="navbar-main">
-        <div class="container">
-          <!-- Mobile togglers btn -->
-          <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#offcanvas">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- logo -->
-          <a class="navbar-brand" href="">
-            <img src="assets/img/static/dark.png" style="height: 50px;">
-            <img class="d-none d-sm-inline" src="assets/img/static/35years.png" style="height: 50px;">
-          </a>
-
-          <!-- main Nav -->
-          <div class="navbar-collapse offcanvas-collapse" id="offcanvas">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-                <div class="dropdown-menu dropdown-menu-lg">
-                  <ul class="list-group">
-                    <h6 class="list-title">Water Heaters</h6>
-                    <a href="#" class="list-link">Instant Water Heaters</a>
-                    <a href="#" class="list-link">Storage Water Heaters</a>
-                    <a href="#" class="list-link">Multipoint Heaters</a>
-                    <a href="#" class="list-link">Domestic Water Pumps</a>
-                  </ul>
-                  <ul class="list-group">
-                    <h6 class="list-title">Home</h6>
-                    <a href="#" class="list-link">Water Purifier</a>
-                    <a href="#" class="list-link">Celling Fans</a>
-                  </ul>
-                  <!-- <div class="img-switch"><img src="assets/img/static/" alt=""></div> -->
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="">Promotions</a>
-              </li>
-              <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
-                <div class="dropdown-menu dropdown-menu-lg">
-                  <ul class="list-group">
-                    <h6 class="list-title">For Homes</h6>
-                    <a href="#" class="list-link">E-warranty</a>
-                    <a href="#" class="list-link">Request for Services</a>
-                    <hr>
-                    <a href="#" class="list-link">FAQ</a>
-                    <a href="#" class="list-link">Instalation Guide</a>
-                  </ul>
-                  <ul class="list-group">
-                    <h6 class="list-title">For Businesses</h6>
-                    <a href="#" class="list-link">Project Services</a>
-                    <a href="#" class="list-link">Product Maintenance</a>
-                    <a href="#" class="list-link">Training Services</a>
-                    <hr>
-                    <a href="#" class="list-link">FAQ</a>
-                    <a href="#" class="list-link">Instalation Guide</a>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">Contact Us</a>
-              </li>
-            </ul>
-
-            <!-- Search icon -->
-            <ul class="navbar-nav ml-lg-auto">
-              <li class="nav-item">
-                <a href="#" class="nav-link" data-action="search-open" data-target="#search-main"><i class="fas fa-search"></i></a>
-              </li>
-            </ul>
-
-          </div>
-
-          <!-- country-select -->
-          <div class="dropdown country-select" data-toggle="hover">
-            <div class="dropdown-toggle" role="button" id="countrySelect" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <span>Malaysia</span>
-              <img class="flag-icon" src="./assets/img/icons/flags/malaysia.svg">
-            </div>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="countrySelect">
-              <div class="list-group">
-                <a class="list-group-item list-group-item-action" href="#">Malaysia <img class="flag-icon" src="./assets/img/icons/flags/malaysia.svg"></a>
-                <a class="list-group-item list-group-item-action" href="#">Thailand <img class="flag-icon" src="./assets/img/icons/flags/thailand.svg"></a>
-                <a class="list-group-item list-group-item-action active" href="#">Singapore <img class="flag-icon" src="./assets/img/icons/flags/singapore.svg"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-<footer class="footer-light">
-  <div class="container">
-    <div class="row pt-md">
-      <div class="col-md col-lg-2 offset-md-2">
-        <h6 class="link-label">Product</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Instant Water Heaters</a>
-          </li>
-          <li><a href="#">Storage Water Heaters</a>
-          </li>
-          <li><a href="#">Domestic Water Pumps</a>
-          </li>
-          <li><a href="#">Water Purifier</a>
-          </li>
-          <li><a href="#">Celling Fan</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col col-md col-lg-2">
-        <h6 class="link-label">Services</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">About JOVEN</a>
-          </li>
-          <li><a href="#">News & Promos</a>
-          </li>
-          <li><a href="#">Careers</a>
-          </li>
-          <li><a href="#">Contact Us</a>
-          </li>
-          <li><a href="#">E-warranty</a>
-          </li>
-          <li><a href="#">FAQ</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col col-md col-lg-2">
-        <h6 class="link-label">country</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Malaysia</a>
-          </li>
-          <li><a href="#">Thailand</a>
-          </li>
-          <li><a href="#">Singapore</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-sm-8 col-lg-4 order-md-2 d-none d-lg-block align-self-top">
-        <img src="./assets/img/static/awards.png" alt="awards" class="img-fluid">
-      </div>
-    </div>
-  </div>
-  <section class="footer-dark">
-    <div class="footer-bottom">
+    </nav>
+  </header>
+  <main>
+    <section class="slice slice-lg warranty-form bg-fadeWhite">
       <div class="container">
         <div class="row">
-          <div class="col-8 col-md-10 order-md-2 footer-text">
-            <span class="d-md-inline-block">&copy; 2018 Joven SDN BHD</span>
-            <a href="#" class="text-xs">Terms of Use</a>
-            <a href="#" class="text-xs">Privacy Policy</a>
+          <div class="col-12">
+            <h3 class="heading-title">
+              <div class="pre-head">Support for Homes</div>E-Warranty
+            </h3>
           </div>
-          <div class="col-4 col-md-2 order-md-1 jovey">
-            <img src="./assets/img/static/jovey.png" class="img-fluid footer-logo">
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <h4 class="col-12">Customer Information</h4>
+            <div class="col-md-3 mb-3">
+              <label for="title">Title</label>
+              <select class="custom-select d-block w-100" id="title" required>
+                <option value="">Your Title</option>
+                <option>Mr.</option>
+                <option>Ms.</option>
+                <option>Dr.</option>
+              </select>
+              <div class="invalid-feedback">
+                Please Select a title
+              </div>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="title">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid name is required.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required>
+              <div class="invalid-feedback">
+                Date of Birth is required.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="gender">Gender</label>
+              <select class="custom-select d-block w-100" id="gender" required>
+                <option value="">Your Gender</option>
+                <option>Male.</option>
+                <option>Female.</option>
+              </select>
+              <div class="invalid-feedback">
+                Please Select a title
+              </div>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="title">Nationality</label>
+              <input type="text" class="form-control" id="name" placeholder="" value="">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="race">Race</label>
+              <input type="text" class="form-control" id="race">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="email">Email </label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address .
+              </div>
+            </div>
+
+            <div class="mb-3 col-md-6">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="Address" required>
+              <div class="invalid-feedback">
+                Please enter your address.
+              </div>
+            </div>
+
+            <div class="mb-3 col-md-6">
+              <label for="city">City</label></label>
+              <input type="text" class="form-control" id="city" placeholder="Enter your City" required>
+              <div class="invalid-feedback">
+                Please enter your city.
+              </div>
+            </div>
+
+            <div class="mb-3 col-md-6">
+              <label for="state">State</label></label>
+              <input type="text" class="form-control" id="state" placeholder="Enter your State" required>
+              <div class="invalid-feedback">
+                Please enter your State.
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="postcode">Postcode</label></label>
+              <input type="text" class="form-control" id="postcode" placeholder="Enter your Postcode" required>
+              <div class="invalid-feedback">
+                Please enter your postcode.
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="contact">contact Number</label></label>
+              <input type="text" class="form-control" id="contact" placeholder="Enter your City" required>
+              <div class="invalid-feedback">
+                <div class="invalid-feedback">
+                  Please enter your contact.
+                </div>
+              </div>
+            </div>
+
+
+            <h4 class="col-12">Product Information / Warranty Validation</h4>
+
+            <div class="mb-3 col-md-6">
+              <label for="serial">Serial number</label></label>
+              <input type="text" class="form-control" id="serial" placeholder="Enter your serial Number" required>
+              <div class="invalid-feedback">
+                Please enter your Serial number.
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="wcn">Warranty Card Number</label></label>
+              <input type="text" class="form-control" id="wcn" placeholder="Enter your Warranty Card Number" required>
+              <div class="invalid-feedback">
+                <div class="invalid-feedback">
+                  Please enter your Warranty Card Number.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="dop">date of purchase</label></label>
+              <input type="date" class="form-control" id="dop" placeholder="Enter your date of purchase" required>
+              <div class="invalid-feedback">
+                Please enter your date of purchase.
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="purchase_from">purchase area</label></label>
+              <input type="text" class="form-control" id="purchase_from" placeholder="here did you buy it from" required>
+              <div class="invalid-feedback">
+                <div class="invalid-feedback">
+                  Please enter your purchase area.
+                </div>
+              </div>
+            </div>
+            <div class="custom-control custom-checkbox mb-3">
+              <label class="custom-control-label" for="terms">I hearby agree with the terms and conditions of the warranty</label>
+              <input type="checkbox" class="custom-control-input" id="terms">
+            </div>
+            <hr class="mb-4">
           </div>
+          <button class="mx-0 btn btn-primary btn-lg" type="submit">Submitr Warranty</button>
+        </form>
+    </section>
+
+  </main>
+  <footer class="footer-light">
+    <div class="container">
+      <div class="row pt-md">
+        <div class="col-md col-lg-2 offset-md-2">
+          <h6 class="link-label">Product</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Instant Water Heaters</a>
+            </li>
+            <li><a href="#">Storage Water Heaters</a>
+            </li>
+            <li><a href="#">Domestic Water Pumps</a>
+            </li>
+            <li><a href="#">Water Purifier</a>
+            </li>
+            <li><a href="#">Celling Fan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-md col-lg-2">
+          <h6 class="link-label">Services</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">About JOVEN</a>
+            </li>
+            <li><a href="#">News & Promos</a>
+            </li>
+            <li><a href="#">Careers</a>
+            </li>
+            <li><a href="#">Contact Us</a>
+            </li>
+            <li><a href="#">E-warranty</a>
+            </li>
+            <li><a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-md col-lg-2">
+          <h6 class="link-label">country</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Malaysia</a>
+            </li>
+            <li><a href="#">Thailand</a>
+            </li>
+            <li><a href="#">Singapore</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-8 col-lg-4 order-md-2 d-none d-lg-block align-self-top">
+          <img src="./assets/img/static/awards.png" alt="awards" class="img-fluid">
         </div>
       </div>
     </div>
-  </section>
-</footer>
+    <section class="footer-dark">
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 col-md-10 order-md-2 footer-text">
+              <span class="d-md-inline-block">&copy; 2018 Joven SDN BHD</span>
+              <a href="#" class="text-xs">Terms of Use</a>
+              <a href="#" class="text-xs">Privacy Policy</a>
+            </div>
+            <div class="col-4 col-md-2 order-md-1 jovey">
+              <img src="./assets/img/static/jovey.png" class="img-fluid footer-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
 
   <!-- Core -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
