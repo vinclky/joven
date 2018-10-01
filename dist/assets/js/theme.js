@@ -41,13 +41,11 @@ $(window).on("load resize", function() {
   });
 
   // Sticky navbar
-  if ($(window).width() > 991) {
     $(".navbar-fixed-top")[0] &&
       $(".navbar-fixed-top").stick_in_parent({
         parent: "body",
         recalc_every: 1
       });
-  }
 });
 
 $(document).ready(function() {

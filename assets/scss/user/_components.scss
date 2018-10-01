@@ -70,6 +70,12 @@
 }
 .card {
   overflow: hidden;
+    transition: $transition-base;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    &:hover {
+    transition:$transition-base;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+  }
   .heading {
     font-weight: bold;
   }
@@ -91,24 +97,18 @@
     border: 2px solid $white;
     border-radius: 50%;
     padding: 9px;
-    transition: all linear 0.1s;
-
+    transition: $transition-base;
     &:hover {
       color: $white;
-      transform: scale(1.2);
-      transition: all linear 0.1s;
+      transition: $transition-base;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
   }
 }
 
 // Product Card
 .card-product {
-  transition: all ease-out 0.2s;
   margin-bottom: 1.7rem;
-  &:hover {
-    transform: scale(1.03);
-    transition: all ease-out 0.2s;
-  }
   img {
     border-bottom: 1px solid $lightGray;
   }
@@ -126,7 +126,10 @@
   color: $primary;
 }
 .btn {
-  box-shadow: 0px 3px 9px $lightGray;
+  box-shadow: 0px 1px 3px  rgba(0,0,0,0.3);
+  &:hover{
+    box-shadow: 0 3px 9px rgba(0,0,0,0.3);
+  }
 }
 // product-select
 .product-select {
@@ -155,23 +158,6 @@
 }
 .product-img{
   .carousel{
-    .carousel-control{
-      a{
-        background: $lightBlue;
-        color: $white;
-        width: 32px;
-        height: 32px;
-        position: relative;
-        opacity: 1;
-        display: inline-block;
-        line-height: 32px;
-        font-size: 32px;
-        &:hover{
-          box-shadow: 0 0 6px rgba(0,0,0,0.3);
-          background: linear-gradient(135deg, rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%);
-        }
-      }
-    }
     .carousel-item{
       text-align: center;
       img{
@@ -326,3 +312,25 @@
     display: block;
   }
 }
+
+// carousel control
+    .carousel-control{
+      a{
+        background: $lightBlue;
+        color: $white;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        opacity: 1;
+        display: inline-block;
+        line-height: 32px;
+        font-size: 32px;
+        transition: $transition-base;
+        box-shadow: none;
+        &:hover{
+          transition: $transition-base;
+          box-shadow: $btn-hover-box-shadow;
+          transform: scale(1.2)
+        }
+      }
+    }

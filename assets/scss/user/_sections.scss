@@ -15,7 +15,6 @@
     margin: 0.6rem 0;
     min-height: 300px;
   }
-
 }
 // warranty
 .warranty {
@@ -34,75 +33,108 @@
 
 // explore product
 .explore-product {
-  .explore-box {
-    .carousel {
-      img {
-        max-height: 150px;
-        width: auto;
-      }
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  picture {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
     }
-    .explore-text {
-      background: $overlayPrimary;
-      padding: 1rem 3rem;
-      display: inline-block;
-      .heading {
-        font-size: 2rem;
+  }
+  .explore-box {
+    position: relative;
+    z-index: 3;
+    padding-top: 160px;
+    width: 100%;
+    .content {
+      .carousel {
+        padding: 0 2rem;
+        .carousel-item {
+          img {
+
+          }
+        }
       }
-      * {
-        color: $white;
+      .explore-text {
+        padding: 1.5rem 1rem;
+        display: block;
+        max-height: 230px;
+        overflow: visible;
+        .row{
+          position: relative;
+          top: -80px;
+        }
+        .heading {
+          font-size: 1.4rem;
+        }
+        * {
+          color: $white;
+        }
+        &.red {
+          background: $primary;
+        }
+        &.black {
+          background: $darkGray;
+        }
+        &.blue {
+          background: $lightBlue;
+        }
       }
     }
   }
 }
 // product listing banner
-.product-listing-hero{
-  .list-banner-img{
-    border-bottom-left-radius: .8rem;
-    border-bottom-right-radius: .8rem;
+.product-listing-hero {
+  .list-banner-img {
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
     height: 0;
     padding-top: 60%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
   }
-  .card-desc{
+  .card-desc {
     z-index: 5;
     margin: -30px auto;
   }
-  .card-choose{
+  .card-choose {
     position: relative;
     z-index: 4;
     margin-bottom: -30px;
-}
+  }
 }
 
 // Warranty Form
 
 // about
-.award-list{
+.award-list {
   margin-top: 10px;
-  h6{
+  h6 {
     color: $primary;
   }
-  ul{
+  ul {
     padding: 0;
-    li{
+    li {
       list-style: none;
     }
   }
 }
-.projects{
-  .country-name{
+.projects {
+  .country-name {
     margin-bottom: 20px;
     color: $lightBlue;
   }
-  ul{
+  ul {
     padding: 0px;
-    li{
+    li {
       list-style: none;
       padding-left: 20px;
-          border-left: 2px solid $primary;
+      border-left: 2px solid $primary;
     }
   }
 }
