@@ -33,60 +33,67 @@
 
 // explore product
 .explore-product {
-  position: relative;
-  min-height: 350px;
   overflow: hidden;
+  position: relative;
   picture {
+    display: block;
+    height: 100%;
+    width: 100%;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
+      object-fit: cover;
       width: 100%;
-      z-index: 2;
+      height: 100%;
     }
   }
-  .explore-box {
-    position: relative;
-    z-index: 3;
-    padding-top: 160px;
+  .content-container {
     width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    * {
+      color: $white;
+    }
     .content {
-      .carousel {
-        padding: 0 2rem;
-        .carousel-item {
-          img {
-
-          }
-        }
-      }
-      .explore-text {
-        padding: 1.5rem 1rem;
-        display: block;
-        max-height: 230px;
-        overflow: visible;
-        .row{
-          position: relative;
-          top: -80px;
-        }
-        .heading {
-          font-size: 1.4rem;
-        }
-        * {
-          color: $white;
-        }
-        &.red {
-          background: $primary;
-        }
-        &.black {
-          background: $darkGray;
-        }
-        &.blue {
-          background: $lightBlue;
-        }
+      left: auto;
+      padding: 20px 20px 30px;
+      width: 100%;
+      position: relative;
+      transform: none;
+      top: -60%;
+      z-index: 6;
+      &::after {
+        content: "";
+        top: 0;
+        right: 0px;
+        width: 1000%;
+        height: 100%;
+        z-index: -1;
+        padding-right: 50px;
+        position: absolute;
       }
     }
+    &.red .content::after {
+      background: $primary;
+    }
+    &.dark .content::after {
+      background: $darkGray;
+    }
+    &.blue .content::after {
+      background: $lightBlue;
+    }
+    .carousel {
+      padding: 0 2rem;
+    }
+    .explore-text {
+      padding: 20px 0;
+    }
+    .heading {
+      font-size: 1.4rem;
+    }
+
   }
 }
+
 // product listing banner
 .product-listing-hero {
   .list-banner-img {

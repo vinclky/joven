@@ -112,6 +112,9 @@
   img {
     border-bottom: 1px solid $lightGray;
   }
+  .compare-p{
+    margin-top: 10px;
+  }
 }
 // warranty card
 .warranty-call {
@@ -291,6 +294,7 @@
   top: 50%;
   padding: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  z-index: 1060;
 
   .link{
     display: block;
@@ -330,7 +334,18 @@
         &:hover{
           transition: $transition-base;
           box-shadow: $btn-hover-box-shadow;
-          transform: scale(1.2)
-        }
+          transform: scale(1.2) }
+      }
+    }
+
+    // accordian
+    .accordion{
+      margin-bottom: 50px;
+      .card-header{
+          cursor: pointer;
+          color: $lightBlue;
+      }
+      .accordion-heading{
+        border-bottom: 2px solid $primary;
       }
     }
