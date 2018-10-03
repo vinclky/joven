@@ -17,7 +17,10 @@ $black: #161616;
 $overlayDark: rgba(0,0,0,0.7);
 $overlayPrimary: rgba(237, 28, 36, 0.7);
 $overlayLightBlue: rgba(53, 171, 188, 0.7);
-
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "lightBlue":      $lightBlue,
+), $theme-colors);
 
 // Typography
 

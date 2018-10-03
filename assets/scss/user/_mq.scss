@@ -2,6 +2,9 @@
 @include media-breakpoint-up(sm) {
 }
 @include media-breakpoint-up(md) {
+  .card{
+    margin-bottom: 1rem;
+  }
   .product-listing-hero {
     position: relative;
     .list-banner-img {
