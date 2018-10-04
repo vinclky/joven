@@ -5,7 +5,7 @@ The rest of the folders are source codes and NPM packages for the plugins I used
 
 ## to do. 
 * other Pages. Html
-* Complete Homepage html
-* add vendor plugins into js/vendor directory via GULP
+* 
+* Uglify and Concat all JS into One file 
 * additional JS interations. 
 * Async search results 
