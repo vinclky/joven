@@ -28,7 +28,7 @@ body {
   }
   .offcanvas-collapse.open {
     left: 20%;
-    box-shadow: 0 20px 20px $overlayDark;
+    box-shadow: 0 0 20px $overlayDark;
     visibility: visible;
     opacity: 1;
     transition-timing-function: ease-in-out;
@@ -36,6 +36,7 @@ body {
     transition-property: left, visibility, opacity;
   }
   .body-backdrop.backdrop-canvas {
+    position: fixed;
     z-index: 1030;
   }
 }
