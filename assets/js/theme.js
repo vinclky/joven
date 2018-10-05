@@ -133,7 +133,7 @@ $(document).ready(function() {
     });
 
   // Wavify
-  $('[data-toggle="wavify"]').each(function() {
+  /*   $('[data-toggle="wavify"]').each(function() {
     var $this = $(this).find("path");
 
     $this.wavify({
@@ -142,7 +142,7 @@ $(document).ready(function() {
       amplitude: 40,
       speed: 0.15
     });
-  });
+  }); */
 
   // Floating label
   $(".form-control")
@@ -395,7 +395,7 @@ $(document).ready(function() {
       });
     });
 
-  // Isotope for masonry layouts
+  /*   // Isotope for masonry layouts
   $(".masonry-container")[0] &&
     $(".masonry-container").each(function(i, masonryContainer) {
       var $masonryContainer = $(masonryContainer);
@@ -447,7 +447,7 @@ $(document).ready(function() {
         $buttonGroup.find(".active").removeClass("active");
         $(this).addClass("active");
       });
-    });
+    }); */
 
   // Background image holder - Takes the img and transforms it in a bg image
   $(".bg-img-holder")[0] &&
@@ -766,7 +766,7 @@ $(document).ready(function() {
         break;
     }
   });
-
+  // Product Comparison
   $(".compare-p").click(function() {
     if (
       $(this)
@@ -780,7 +780,20 @@ $(document).ready(function() {
     } else {
       $(this)
         .children("label")
-        .html('Add to Comparison');
+        .html("Add to Comparison");
     }
   });
+
+  // Product Comparison page
+  $(window).scroll(function() {
+    if ($("#compareHead").hasClass("is_stuck")) {
+      console.log("it's STuCK!!!!");
+      $(".model-img").addClass("d-none");
+    } else if ($("#compareHead").not(".is_stuck")) {
+      $(".model-img").removeClass("d-none");
+      console.log("it's FReE");
+    }
+  });
+
+
 });

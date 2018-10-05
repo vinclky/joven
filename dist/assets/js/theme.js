@@ -41,11 +41,11 @@ $(window).on("load resize", function() {
   });
 
   // Sticky navbar
-    $(".navbar-fixed-top")[0] &&
-      $(".navbar-fixed-top").stick_in_parent({
-        parent: "body",
-        recalc_every: 1
-      });
+  $(".navbar-fixed-top")[0] &&
+    $(".navbar-fixed-top").stick_in_parent({
+      parent: "body",
+      recalc_every: 1
+    });
 });
 
 $(document).ready(function() {
@@ -97,7 +97,7 @@ $(document).ready(function() {
       .scrollLock();
   $(".selectpicker")[0] && $(".selectpicker").selectpicker();
   $(".textarea-autosize")[0] && autosize($(".textarea-autosize"));
-  $('[data-toggle="tooltip"]').tooltip();
+  // $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').each(function() {
     var popoverClass = "";
     if ($(this).data("color")) {
@@ -133,7 +133,7 @@ $(document).ready(function() {
     });
 
   // Wavify
-  $('[data-toggle="wavify"]').each(function() {
+  /*   $('[data-toggle="wavify"]').each(function() {
     var $this = $(this).find("path");
 
     $this.wavify({
@@ -142,7 +142,7 @@ $(document).ready(function() {
       amplitude: 40,
       speed: 0.15
     });
-  });
+  }); */
 
   // Floating label
   $(".form-control")
@@ -183,7 +183,7 @@ $(document).ready(function() {
       });
   });
 
-  // NoUI Slider
+  /*  // NoUI Slider
   if ($(".input-slider-container")[0]) {
     $(".input-slider-container").each(function() {
       var slider = $(this).find(".input-slider");
@@ -234,7 +234,7 @@ $(document).ready(function() {
       c.noUiSlider.on("update", function(a, b) {
         f[b].textContent = a[b];
       });
-  }
+  } */
 
   // Scroll to anchor with scroll animation
   $(".scroll-me, [data-scroll-to], .toc-entry a").on("click", function(event) {
@@ -256,7 +256,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-  // Count to (milestone counter)
+  /*   // Count to (milestone counter)
   $(".milestone-count")[0] &&
     $(".milestone-count").viewportChecker({
       callbackFunction: function(elem, action) {
@@ -272,9 +272,9 @@ $(document).ready(function() {
           }
         });
       }
-    });
+    }); */
 
-  // Countdown
+  /*   // Countdown
   $(".countdown")[0] &&
     $(".countdown").each(function() {
       var $this = $(this);
@@ -291,9 +291,9 @@ $(document).ready(function() {
           )
         );
       });
-    });
+    }); */
 
-  // Typed JS
+  /*   // Typed JS
   $("[data-type-this]")[0] &&
     $("[data-type-this]").each(function() {
       var element = $(this).attr("id");
@@ -307,7 +307,7 @@ $(document).ready(function() {
         backSpeed: 70,
         loop: true
       });
-    });
+    }); */
 
   // Swiper
   $(".swiper-js-container")[0] &&
@@ -395,7 +395,7 @@ $(document).ready(function() {
       });
     });
 
-  // Isotope for masonry layouts
+  /*   // Isotope for masonry layouts
   $(".masonry-container")[0] &&
     $(".masonry-container").each(function(i, masonryContainer) {
       var $masonryContainer = $(masonryContainer);
@@ -447,7 +447,7 @@ $(document).ready(function() {
         $buttonGroup.find(".active").removeClass("active");
         $(this).addClass("active");
       });
-    });
+    }); */
 
   // Background image holder - Takes the img and transforms it in a bg image
   $(".bg-img-holder")[0] &&
@@ -468,7 +468,7 @@ $(document).ready(function() {
         .css("height", height);
     });
 
-  // Pricing switcher
+  /*  // Pricing switcher
   $(".pricing-container")[0] &&
     $(".pricing-container button[data-pricing]").click(function() {
       var $this = $(this);
@@ -496,7 +496,7 @@ $(document).ready(function() {
           $(this).data("pricing-value", old_val);
         });
       }
-    });
+    }); */
 
   // Containers with animated elements on hover
   $('[data-animate-items="hover"]')[0] &&
@@ -550,7 +550,7 @@ $(document).ready(function() {
     );
 
   // Quick product view (requires Fancybox 3)
-  $(".quick_view")[0] &&
+  /*  $(".quick_view")[0] &&
     $(".quick_view").fancybox({
       baseClass: "quick-view-container",
       infobar: false,
@@ -623,75 +623,75 @@ $(document).ready(function() {
           .eq(instance.currIndex)
           .addClass("active");
       }
-    });
+    }); */
 
-  // Product actions
-  $(".card-product")
-    .mouseenter(function() {
-      var $this = $(this).find(".card-product-actions");
-      var animationIn = $this.data("animation-in");
+  // // Product actions
+  // $(".card-product")
+  //   .mouseenter(function() {
+  //     var $this = $(this).find(".card-product-actions");
+  //     var animationIn = $this.data("animation-in");
 
-      if ($(this).find(".card-product-actions")[0]) {
-        $this.addClass("in animated " + animationIn);
-        $this.one(
-          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-          function() {
-            $this.removeClass("animated " + animationIn);
-          }
-        );
-      }
-    })
+  //     if ($(this).find(".card-product-actions")[0]) {
+  //       $this.addClass("in animated " + animationIn);
+  //       $this.one(
+  //         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+  //         function() {
+  //           $this.removeClass("animated " + animationIn);
+  //         }
+  //       );
+  //     }
+  //   })
 
-    .mouseleave(function() {
-      var $this = $(this).find(".card-product-actions");
-      var animationOut = $this.data("animation-out");
+  //   .mouseleave(function() {
+  //     var $this = $(this).find(".card-product-actions");
+  //     var animationOut = $this.data("animation-out");
 
-      if ($(this).find(".card-product-actions")[0]) {
-        $this.addClass("animated " + animationOut);
-        $this.one(
-          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-          function() {
-            $this.removeClass("in animated " + animationOut);
-          }
-        );
-      }
-    });
+  //     if ($(this).find(".card-product-actions")[0]) {
+  //       $this.addClass("animated " + animationOut);
+  //       $this.one(
+  //         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+  //         function() {
+  //           $this.removeClass("in animated " + animationOut);
+  //         }
+  //       );
+  //     }
+  //   });
 
   // Instafeed
-  $(".instafeed")[0] &&
-    $(".instafeed").each(function() {
-      var $this = $(this);
-      var target = $this.attr("id");
-      var userId = $this.data("user-id");
-      var limit = $this.data("limit");
-      var col = $this.data("col");
-      var template;
-      var classes = $this.data("classes") ? $this.data("classes") : "";
-      var lightbox = $this.data("lightbox") ? " data-fancybox " : "";
+  // $(".instafeed")[0] &&
+  //   $(".instafeed").each(function() {
+  //     var $this = $(this);
+  //     var target = $this.attr("id");
+  //     var userId = $this.data("user-id");
+  //     var limit = $this.data("limit");
+  //     var col = $this.data("col");
+  //     var template;
+  //     var classes = $this.data("classes") ? $this.data("classes") : "";
+  //     var lightbox = $this.data("lightbox") ? " data-fancybox " : "";
 
-      // Fill with the data from Instagram API
-      var clientID = "c81e735d834e4960ab5bfdc89fff7b7a";
-      var accessToken = "4168279954.c81e735.bd435dd21a344208ad569b028b372088";
+  //     // Fill with the data from Instagram API
+  //     var clientID = "c81e735d834e4960ab5bfdc89fff7b7a";
+  //     var accessToken = "4168279954.c81e735.bd435dd21a344208ad569b028b372088";
 
-      var instafeed = new Instafeed({
-        target: target,
-        clientId: clientID,
-        accessToken: accessToken,
-        get: "user",
-        userId: userId,
-        limit: limit,
-        resolution: "thumbnail",
-        template:
-          '<div class="col-sm-' +
-          col +
-          ' col-6"><a href="{{link}}"' +
-          lightbox +
-          '><img src="{{image}}" class="img-fluid ' +
-          classes +
-          '" /></a></div>'
-      });
-      instafeed.run();
-    });
+  //     var instafeed = new Instafeed({
+  //       target: target,
+  //       clientId: clientID,
+  //       accessToken: accessToken,
+  //       get: "user",
+  //       userId: userId,
+  //       limit: limit,
+  //       resolution: "thumbnail",
+  //       template:
+  //         '<div class="col-sm-' +
+  //         col +
+  //         ' col-6"><a href="{{link}}"' +
+  //         lightbox +
+  //         '><img src="{{image}}" class="img-fluid ' +
+  //         classes +
+  //         '" /></a></div>'
+  //     });
+  //     instafeed.run();
+  //   });
 
   // Click events
   $("body").on("click", "[data-action]", function(e) {
@@ -766,4 +766,34 @@ $(document).ready(function() {
         break;
     }
   });
+  // Product Comparison
+  $(".compare-p").click(function() {
+    if (
+      $(this)
+        .children("input")
+        .prop("checked")
+    ) {
+      console.log("checked");
+      $(this)
+        .children("label")
+        .html('Product Added | <a href="#" class="">Compare Now</a>');
+    } else {
+      $(this)
+        .children("label")
+        .html("Add to Comparison");
+    }
+  });
+
+  // Product Comparison page
+  $(window).scroll(function() {
+    if ($("#compareHead").hasClass("is_stuck")) {
+      console.log("it's STuCK!!!!");
+      $(".model-img").addClass("d-none");
+    } else if ($("#compareHead").not(".is_stuck")) {
+      $(".model-img").removeClass("d-none");
+      console.log("it's FReE");
+    }
+  });
+
+
 });

@@ -90,7 +90,6 @@
     .heading {
       font-size: 1.4rem;
     }
-
   }
 }
 
@@ -145,3 +144,41 @@
     }
   }
 }
+
+// compare products
+
+#compareHead.is_stuck {
+  z-index: 10;
+  .compare-head{
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+  }
+}
+.compare-head{
+    background: $white;
+}
+.compare-item {
+  // border-top: 1px solid $lightGray;
+}
+.model-name{
+  padding: .5rem 0;
+}
+.compare-title {
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.6rem;
+  color: $lightBlue;
+  // border-top: 1px solid $lightGray;
+}
+.compare-info {
+  background: $fadeWhite;
+  z-index: -2;
+        border-top: 1px solid $lightGray;
+  div {
+    padding: 0.75rem;
+    // border-bottom: 1px solid $lightGray
+  }
+}
+.compare-info:first-of-type{
+      border-top: 1px solid $lightBlue;
+}
+

@@ -2,7 +2,7 @@
 @include media-breakpoint-up(sm) {
 }
 @include media-breakpoint-up(md) {
-  .card{
+  .card {
     margin-bottom: 1rem;
   }
   .product-listing-hero {
@@ -35,6 +35,9 @@
   }
 }
 @include media-breakpoint-up(lg) {
+  .container {
+    max-width: 992px;
+  }
   .navbar-main .offcanvas-collapse {
     .dropdown-menu-lg {
       background: $fadeWhite;
@@ -86,7 +89,6 @@
     &:nth-of-type(odd) {
       .content-container {
         flex-direction: unset;
-
         .content {
           right: 20px;
           &::after {
@@ -127,14 +129,48 @@
       }
     }
   }
+
+  // product-comparison
+  .cd-products-table.top-fixed .cd-products-columns > li {
+    padding-top: 160px;
+  }
+
+  .cd-products-table.top-fixed .top-info {
+    height: 160px;
+    position: fixed;
+    top: 0;
+  }
+
+  .cd-products-table.top-fixed .top-info h3 {
+    transform: translateY(-116px);
+  }
+
+  .cd-products-table.top-fixed .top-info img {
+    transform: translateY(-62px) scale(0.4);
+  }
 }
 
 @include media-breakpoint-up(xl) {
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 22px 0.4rem;
-    height: 100%;
+  .is_stuck {
+    .img-fluid {
+      max-width: 33%;
+      transition: all 0.3s linear;
+      display: inline-block!important;
+      margin: 0;
+    }
+    .model-name {
+      display: inline-block;
+      padding-left: 9px;
+      font-size: 1.2rem;
+    }
+  }
+  .img-fluid {
+    transition: all 0.3s linear;
+    text-emphasis: center;
+    margin: auto;
+  }
+  .model-name {
+    text-align: center;
     display: block;
-    border: none;
   }
 }
