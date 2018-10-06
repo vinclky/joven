@@ -7,7 +7,7 @@
 
 .dropdown-menu {
     font-size: $dropdown-font-size;
-
+    
     .dropdown-item {
         > i,
         > svg {
@@ -45,7 +45,7 @@
 .dropdown-header {
     padding-left: 1rem;
     padding-right: 1rem;
-}
+} 
 
 
 // Inverse dropdown menu
@@ -71,7 +71,7 @@
 
 
 // Dropown: Sizes
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg) { 
     .dropdown-menu-arrow {
         &:before {
             background: $dropdown-bg;
@@ -113,7 +113,7 @@
                     left: auto;
                 }
             }
-        }
+        } 
     }
 
     .dropdown-menu-lg {
@@ -179,14 +179,18 @@
     .dropdown-animate[data-toggle="hover"] {
         .dropdown-menu {
             margin: 0;
+            display: block;
+            transform: translateX(-16px) translateY(-3px) scale(.97);
             transition: all .3s ease;
         }
 
         &:hover {
             .dropdown-menu {
+                display: block;
                 opacity: 1;
                 pointer-events: auto;
                 visibility: visible;
+                transform: translateX(-16px) translateY(-3px) scale(1);
             }
         }
     }
@@ -203,7 +207,7 @@
     100% {
         transform: translateX(-16px) translateY(-3px) scale(1);
         opacity: 1;
-    }
+    } 
 }
 
 @keyframes hide-navbar-dropdown {
@@ -216,5 +220,5 @@
     to {
         opacity: 0;
         transform: translateX(-16px) translateY(-3px) scale(.97);
-    }
+    } 
 }

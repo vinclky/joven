@@ -1,4 +1,4 @@
-// Section slices 
+// Section slices
 
 section {
     background-color: section-color("primary");
@@ -57,7 +57,7 @@ section {
         padding-top: 8rem;
         padding-bottom: 8rem;
 
-        .section-inner { 
+        .section-inner {
             background: inherit;
             overflow: hidden;
 
@@ -72,7 +72,7 @@ section {
             width: 100%;
             height: 100%;
         }
-    } 
+    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -80,13 +80,12 @@ section {
         padding-top: 8rem;
         padding-bottom: 12rem;
 
-        .section-inner { 
+        .section-inner {
             top: -40%;
             left: -1rem;
             width: 130%;
             height: 120%;
             transform: rotate(-7deg);
-            will-change: transform;
             border-bottom-left-radius: 3rem;
 
             & + .container {

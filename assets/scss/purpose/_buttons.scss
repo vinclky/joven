@@ -37,14 +37,14 @@
 .btn i:not(:first-child) {
     margin-left: .5rem;
 }
- 
+
 .btn svg:not(:last-child),
 .btn i:not(:last-child) {
     margin-right: .5rem;
 }
 
 
-// Animated 
+// Animated
 
 .btn-animated {
     position: relative;
@@ -103,7 +103,7 @@
 }
 
 
-// Labeled 
+// Labeled
 
 .btn-action-label {
     .btn-label:hover {
@@ -122,6 +122,9 @@
     position: relative;
 
     .btn-inner--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         height: 100%;
         line-height: 1;
@@ -158,7 +161,7 @@
 }
 
 
-// Icons 
+// Icons
 
 .btn-icon {
     .btn-inner--text:not(:first-child) {
@@ -216,25 +219,23 @@
 // Hover animations
 
 .btn-zoom--hover {
-    will-change: transform;
     transform: scale(1);
     @if $enable-transitions {
         transition: $transition-base;
     }
-    
+
     &:hover {
         transform: scale(1.1);
     }
 }
 
 .btn-translate--hover {
-    will-change: transform;
     @if $enable-transitions {
         transition: $transition-base;
     }
     &:hover {
         transform: translateY(-3px);
-        
+
     }
 }
 
@@ -321,4 +322,3 @@
         }
     }
 }
-
