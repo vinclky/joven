@@ -14,7 +14,6 @@ var htmlPrettify = require("gulp-html-prettify");
 var gulp = require("gulp");
 var gulpIf = require("gulp-if");
 var gulpRun = require("gulp-run");
-var gulpUtil = require("gulp-util");
 var concat = require("gulp-concat");
 var npmDist = require("gulp-npm-dist");
 var postcss = require("gulp-postcss");
@@ -117,11 +116,11 @@ gulp.task("minify:js", function(cb) {
     .src(paths.src.base + "/assets/js/theme.js")
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write("maps"))
+    // .pipe(sourcemaps.write("maps")) Causing propblems????
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("maps"))
-    .pipe(gulp.dest(paths.dist.base + "/js"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/js"));
 });
 
 // Live reload
