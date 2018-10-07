@@ -86,7 +86,7 @@
     box-shadow: 0 6px 30px rgba(0,0,0,0.2);
   }
   .heading {
-    font-weight: bold;
+
   }
   .card-title {
     color: $lightBlue;
@@ -97,6 +97,9 @@
   .card-body {
     padding: 1.2rem;
     font-size: 0.9rem;
+    .text-white *{
+      color: $white;
+    }
   }
 }
 .card-video {

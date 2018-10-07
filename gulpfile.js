@@ -15,7 +15,7 @@ var gulp = require("gulp");
 var gulpIf = require("gulp-if");
 var gulpRun = require("gulp-run");
 var gulpUtil = require("gulp-util");
-var gulpConcat = require("gulp-concat");
+var concat = require("gulp-concat");
 var npmDist = require("gulp-npm-dist");
 var postcss = require("gulp-postcss");
 var plumber = require("gulp-plumber");
@@ -53,7 +53,7 @@ var paths = {
 };
 
 // Bundle Js
-gulp.task("bundle:js", function() {
+gulp.task("bundle", function() {
   return gulp
     .src([
       "assets/vendor/jquery/dist/jquery.min.js",

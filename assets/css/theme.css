@@ -6307,11 +6307,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle { right: -10px; }
 
 .card:hover { transition: all 0.2s ease-in-out; box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); }
 
-.card .heading { font-weight: bold; }
-
 .card .card-title { color: #35ABBC; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; }
 
 .card .card-body { padding: 1.2rem; font-size: 0.9rem; }
+
+.card .card-body .text-white * { color: #fff; }
 
 .card-video { text-align: center; }
 
