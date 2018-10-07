@@ -47,29 +47,30 @@ var paths = {
     html: "**/*.html",
     img: "assets/img/**/*.+(png|jpg|gif|svg)",
     js: "assets/js/**/*.js",
-    scss: "assets/scss/**/*.scss"
+    scss: "assets/scss/**/*.scss",
+    vendor: "assets/vendor"
   }
 };
 
 // Bundle Js
-gulp.task("bundle", function() {
+gulp.task("bundle:js", function() {
   return gulp
     .src([
       "assets/vendor/jquery/dist/jquery.min.js",
       "assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+      "assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js",
       "assets/vendor/in-view/dist/in-view.min.js",
       "assets/vendor/autosize/dist/autosize.min.js",
       "assets/vendor/swiper/dist/js/swiper.min.js",
-      "assets/vendor/sticky-kit/sticky-kit.min.js",
       "assets/vendor/select2/dist/js/select2.min.js",
-      "assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js",
-      "assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
-      "assets/js/theme.min.js"
+      "assets/vendor/sticky-kit/dist/sticky-kit.min.js",
+      "assets/js/theme.js"
     ])
     .pipe(concat("bundle.js"))
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
-    .pipe(gulp.dest("dist/assets/js/"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/js/"));
 });
 
 // Compile SCSS
@@ -106,7 +107,7 @@ gulp.task("minify:css", function() {
     .pipe(cleanCss())
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("maps"))
-    .pipe(gulp.dest(paths.dist.base + "/css"));
+    .pipe(gulp.dest(paths.dist.base + "/assets/css"));
 });
 
 // Minify JS
@@ -147,27 +148,29 @@ gulp.task("clean:dist", function() {
   return del.sync(paths.dist.base);
 });
 
-// Copy CSS
-
-gulp.task("copy:css", function() {
-  return gulp
-    .src([paths.src.base + "/assets/css/theme.css"])
-    .pipe(gulp.dest(paths.dist.base + "/css"));
-});
 
 //Copy all images and directories
 
 gulp.task("copy:img", function() {
   return gulp
-    .src([paths.src.base + "/assets/img/**/*"])
+    .src([paths.src.base + "assets/img/**/*"])
     .pipe(gulp.dest(paths.dist.base + "/assets/img/"));
 });
 
 // copy all used html
 
 gulp.task("copy:html", function() {
-  return gulp.src([paths.src.base + "*.html"]).pipe(gulp.dest(paths.dist.base));
+  return gulp
+  .src([paths.src.base + "*.html"])
+  .pipe(gulp.dest(paths.dist.base));
 });
+
+gulp.task("copy:vendor", function () {
+  return gulp
+    .src([paths.src.base + "assets/vendor/**/*"])
+    .pipe(gulp.dest(paths.dist.base + "/assets/vendor/"));
+});
+
 
 // Build
 
@@ -175,11 +178,11 @@ gulp.task("build", function(callback) {
   runSequence(
     "clean:dist",
     "scss",
-    "copy:css",
-    "minify:js",
     "minify:css",
+    "bundle:js",
     "copy:img",
     "copy:html",
+    "copy:vendor",
     callback
   );
 });
