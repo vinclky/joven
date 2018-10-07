@@ -774,14 +774,22 @@ $(document).ready(function() {
         .prop("checked")
     ) {
       console.log("checked");
+      var compare_button = $(this).children("input").data('compare-button');
       $(this)
         .children("label")
-        .html('Product Added | <a href="#" class="">Compare Now</a>');
+        .html('Product Added | '+compare_button);
     } else {
       $(this)
         .children("label")
         .html("Add to Comparison");
     }
+  });
+  
+  $(".compare-p :checked").each(function() {
+      var compare_button = $(this).data('compare-button');
+      $(this)
+        .siblings("label")
+        .html('Product Added | '+compare_button);
   });
 
   // Product Comparison page
