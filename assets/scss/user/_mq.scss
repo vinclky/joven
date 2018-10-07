@@ -35,13 +35,11 @@
   }
 }
 @include media-breakpoint-up(lg) {
-  .container {
-    max-width: 992px;
-  }
-  .navbar-main .offcanvas-collapse {
+  .navbar-main .offcanvas-collapse .nav-item{
     .dropdown-menu-lg {
       background: $fadeWhite;
       display: flex;
+
       .list-group {
         margin: 0;
         padding: 1.5rem;

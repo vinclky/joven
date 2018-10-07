@@ -15,7 +15,7 @@ Copyright 2018 Rocket Signs Lab
 
 "use strict";
 
-var BgImgHolder = (function () {
+var BgImgHolder = (function() {
   // Variables
 
   var $bgImgHolder = $(".bg-img-holder");
@@ -41,7 +41,7 @@ var BgImgHolder = (function () {
   // Events
 
   if ($bgImgHolder.length) {
-    $bgImgHolder.each(function () {
+    $bgImgHolder.each(function() {
       init($(this));
     });
   }
@@ -57,7 +57,7 @@ var BgImgHolder = (function () {
 // Card actions
 //
 
-var CardActions = (function () {
+var CardActions = (function() {
   // Variables
 
   var $card = $(".card"),
@@ -73,7 +73,7 @@ var CardActions = (function () {
       $el.addClass("in animated " + animation);
       $el.one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function () {
+        function() {
           $el.removeClass("animated " + animation);
         }
       );
@@ -88,7 +88,7 @@ var CardActions = (function () {
       $el.addClass("animated " + animation);
       $el.one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function () {
+        function() {
           $el.removeClass("in animated " + animation);
         }
       );
@@ -99,13 +99,13 @@ var CardActions = (function () {
 
   if ($card.length && $(actions).length) {
     $card.on({
-      mouseenter: function () {
+      mouseenter: function() {
         show($(this));
       }
     });
 
     $card.on({
-      mouseleave: function () {
+      mouseleave: function() {
         hide($(this));
       }
     });
@@ -118,7 +118,7 @@ var CardActions = (function () {
 
 ("use strict");
 
-var Countdown = (function () {
+var Countdown = (function() {
   // Variables
 
   var $countdown = $(".countdown");
@@ -133,7 +133,7 @@ var Countdown = (function () {
         '<div class="countdown-item"><span class="countdown-digit">%M</span><span class="countdown-separator">:</span><span class="countdown-label">min</span></div>' +
         '<div class="countdown-item"><span class="countdown-digit">%S</span><span class="countdown-label">sec</span></div>';
 
-    $this.countdown(date).on("update.countdown", function (event) {
+    $this.countdown(date).on("update.countdown", function(event) {
       var $this = $(this).html(event.strftime("" + template));
     });
   }
@@ -141,7 +141,7 @@ var Countdown = (function () {
   // Events
 
   if ($countdown.length) {
-    $countdown.each(function () {
+    $countdown.each(function() {
       init($(this));
     });
   }
@@ -153,23 +153,23 @@ var Countdown = (function () {
 
 ("use strict");
 
-!(function (t) {
-  (t.fn.countTo = function (e) {
+!(function(t) {
+  (t.fn.countTo = function(e) {
     return (
       (e = e || {}),
-      t(this).each(function () {
+      t(this).each(function() {
         var a = t.extend(
-          {},
-          t.fn.countTo.defaults,
-          {
-            from: t(this).data("from"),
-            to: t(this).data("to"),
-            speed: t(this).data("speed"),
-            refreshInterval: t(this).data("refresh-interval"),
-            decimals: t(this).data("decimals")
-          },
-          e
-        ),
+            {},
+            t.fn.countTo.defaults,
+            {
+              from: t(this).data("from"),
+              to: t(this).data("to"),
+              speed: t(this).data("speed"),
+              refreshInterval: t(this).data("refresh-interval"),
+              decimals: t(this).data("decimals")
+            },
+            e
+          ),
           n = Math.ceil(a.speed / a.refreshInterval),
           o = (a.to - a.from) / n,
           r = this,
@@ -184,15 +184,15 @@ var Countdown = (function () {
         }
         l.data("countTo", c),
           c.interval && clearInterval(c.interval),
-          (c.interval = setInterval(function () {
-            f++ ,
+          (c.interval = setInterval(function() {
+            f++,
               s((i += o)),
               "function" == typeof a.onUpdate && a.onUpdate.call(r, i);
             f >= n &&
               (l.removeData("countTo"),
-                clearInterval(c.interval),
-                (i = a.to),
-                "function" == typeof a.onComplete && a.onComplete.call(r, i));
+              clearInterval(c.interval),
+              (i = a.to),
+              "function" == typeof a.onComplete && a.onComplete.call(r, i));
           }, a.refreshInterval)),
           s(i);
       })
@@ -204,7 +204,7 @@ var Countdown = (function () {
       speed: 1e3,
       refreshInterval: 100,
       decimals: 0,
-      formatter: function (t, e) {
+      formatter: function(t, e) {
         return t.toFixed(e.decimals);
       },
       onUpdate: null,
@@ -212,7 +212,7 @@ var Countdown = (function () {
     });
 })(jQuery);
 
-var CountTo = (function () {
+var CountTo = (function() {
   // Variables
 
   var milestone = ".milestone-count",
@@ -221,16 +221,16 @@ var CountTo = (function () {
   // Methods
 
   function init($this) {
-    F(milestone).on("enter", function () {
+    F(milestone).on("enter", function() {
       if (!$this.hasClass("counting-finished")) {
         $this.countTo({
-          formatter: function (value, options) {
+          formatter: function(value, options) {
             return value.toFixed(options.decimals);
           },
-          onUpdate: function (value) {
+          onUpdate: function(value) {
             //console.debug(this);
           },
-          onComplete: function (value) {
+          onComplete: function(value) {
             $(this).addClass("counting-finished");
           }
         });
@@ -251,7 +251,7 @@ var CountTo = (function () {
 
 ("use strict");
 
-var Datepicker = (function () {
+var Datepicker = (function() {
   //
   // Variables
   //
@@ -277,7 +277,7 @@ var Datepicker = (function () {
 
   if ($date.length) {
     // Init selects
-    $date.each(function () {
+    $date.each(function() {
       init($(this));
     });
   }
@@ -289,7 +289,7 @@ var Datepicker = (function () {
 
 ("use strict");
 
-var Dropdown = (function () {
+var Dropdown = (function() {
   // Variables
 
   var $dropdown = $(".dropdown");
@@ -304,7 +304,7 @@ var Dropdown = (function () {
 
       $dropdownMenu.addClass("hide");
 
-      setTimeout(function () {
+      setTimeout(function() {
         $this.removeClass("hide");
       }, 300);
     }
@@ -314,7 +314,7 @@ var Dropdown = (function () {
 
   if ($dropdown.length) {
     $dropdown.on({
-      "hide.bs.dropdown": function () {
+      "hide.bs.dropdown": function() {
         hideDropdown($dropdown);
       }
     });
@@ -331,7 +331,7 @@ var Dropdown = (function () {
 // Form control
 //
 
-var FormControl = (function () {
+var FormControl = (function() {
   // Variables
 
   var $input = $(".form-control");
@@ -340,7 +340,7 @@ var FormControl = (function () {
 
   function init($this) {
     $this
-      .on("focus blur", function (e) {
+      .on("focus blur", function(e) {
         $(this)
           .parents(".form-group")
           .toggleClass("focused", e.type === "focus" || this.value.length > 0);
@@ -359,7 +359,7 @@ var FormControl = (function () {
 // Autosize textarea
 //
 
-var TextareaAutosize = (function () {
+var TextareaAutosize = (function() {
   // Variables
 
   var $textarea = $(".textarea-autosize");
@@ -381,7 +381,7 @@ var TextareaAutosize = (function () {
 // Custom input file
 //
 
-var CustomInputFile = (function () {
+var CustomInputFile = (function() {
   // Variables
 
   var $customInputFile = $(".custom-input-file");
@@ -420,10 +420,10 @@ var CustomInputFile = (function () {
   // Events
 
   if ($customInputFile.length) {
-    $customInputFile.each(function () {
+    $customInputFile.each(function() {
       var $input = $(this);
 
-      $input.on("change", function (e) {
+      $input.on("change", function(e) {
         var $this = this,
           $e = e;
 
@@ -432,10 +432,10 @@ var CustomInputFile = (function () {
 
       // Firefox bug fix
       $input
-        .on("focus", function () {
+        .on("focus", function() {
           focus($input);
         })
-        .on("blur", function () {
+        .on("blur", function() {
           blur($input);
         });
     });
@@ -524,7 +524,7 @@ function initMap() {
     content: contentString
   });
 
-  google.maps.event.addListener(marker, "click", function () {
+  google.maps.event.addListener(marker, "click", function() {
     infowindow.open(map, marker);
   });
 }
@@ -539,7 +539,7 @@ if ($map.length) {
 
 ("use strict");
 
-var Highlight = (function () {
+var Highlight = (function() {
   // Variables
 
   var $highlight = $(".highlight");
@@ -553,7 +553,7 @@ var Highlight = (function () {
   // Events
 
   if ($highlight.length) {
-    $highlight.each(function (i, block) {
+    $highlight.each(function(i, block) {
       init(block);
     });
   }
@@ -565,8 +565,8 @@ var Highlight = (function () {
 
 ("use strict");
 
-var Layout = (function () {
-  $("body").on("click", "[data-action]", function (e) {
+var Layout = (function() {
+  $("body").on("click", "[data-action]", function(e) {
     e.preventDefault();
 
     var $this = $(this);
@@ -577,17 +577,17 @@ var Layout = (function () {
       case "offcanvas-open":
         (target = $this.data("target")),
           $(target).addClass("open"),
-          $("body").append(
-            '<div class="body-backdrop" data-action="offcanvas-close" data-target=' +
+        $("body").append(
+          '<div class="body-backdrop backdrop-offCanvas body-backdrop-dark" data-action="offcanvas-close" data-target=' +
             target +
             " />"
-          );
+        );
         break;
       case "offcanvas-close":
         (target = $this.data("target")),
           $(target).removeClass("open"),
           $("body")
-            .find(".body-backdrop")
+            .find(".backdrop-offCanvas")
             .remove();
         break;
 
@@ -597,8 +597,8 @@ var Layout = (function () {
         $(target).addClass("show");
         $("body").append(
           '<div class="body-backdrop" data-action="aside-close" data-target=' +
-          target +
-          " />"
+            target +
+            " />"
         );
         break;
 
@@ -618,9 +618,9 @@ var Layout = (function () {
         $("body")
           .addClass("navbar-search-open")
           .append(
-            '<div class="body-backdrop body-backdrop-dark" data-action="search-close" data-target="' +
-            target +
-            '" />'
+            '<div class="body-backdrop backdrop-search body-backdrop-dark" data-action="search-close" data-target="' +
+              target +
+              '" />'
           );
         break;
 
@@ -630,7 +630,7 @@ var Layout = (function () {
         $(target).removeClass("show");
         $("body")
           .removeClass("navbar-search-open")
-          .find(".body-backdrop")
+          .find(".backdrop-search")
           .remove();
         break;
     }
@@ -644,7 +644,7 @@ var Layout = (function () {
 
 ("use strict");
 
-var Masonry = (function () {
+var Masonry = (function() {
   // Variables
 
   var $masonryContainer = $(".masonry-container");
@@ -657,7 +657,7 @@ var Masonry = (function () {
       $defaultFilter = $filters.find(".default"),
       defaultFilterValue = $defaultFilter.data("filter");
 
-    var $masonry = $el.imagesLoaded(function () {
+    var $masonry = $el.imagesLoaded(function() {
       // Set default filter if exists
 
       if (defaultFilterValue != undefined && defaultFilterValue != "") {
@@ -680,7 +680,7 @@ var Masonry = (function () {
 
     // Sorting buttons (filters)
 
-    $filters.on("click", "a", function () {
+    $filters.on("click", "a", function() {
       var val = $(this).attr("data-filter");
 
       if (val == "*") {
@@ -698,7 +698,7 @@ var Masonry = (function () {
   // Events
 
   if ($masonryContainer.length) {
-    $masonryContainer.each(function () {
+    $masonryContainer.each(function() {
       init($(this));
     });
   }
@@ -710,7 +710,7 @@ var Masonry = (function () {
 
 ("use strict");
 
-var NavbarCollapse = (function () {
+var NavbarCollapse = (function() {
   // Variables
 
   var $nav = $("#navbar-main"),
@@ -740,19 +740,19 @@ var NavbarCollapse = (function () {
 
   if ($collapse.length) {
     $collapse.on({
-      "show.bs.collapse": function () {
+      "show.bs.collapse": function() {
         showNavbarCollapse($collapse);
       }
     });
 
     $collapse.on({
-      "hide.bs.collapse": function () {
+      "hide.bs.collapse": function() {
         hideNavbarCollapse($collapse);
       }
     });
 
     $collapse.on({
-      "hidden.bs.collapse": function () {
+      "hidden.bs.collapse": function() {
         hiddenNavbarCollapse($collapse);
       }
     });
@@ -763,7 +763,7 @@ var NavbarCollapse = (function () {
 // Sticky Navbar
 //
 
-var NavbarSticky = (function () {
+var NavbarSticky = (function() {
   // Variables
 
   var $nav = $(".navbar-sticky");
@@ -775,7 +775,7 @@ var NavbarSticky = (function () {
 
     // if we've scrolled more than the navigation, change its position to fixed to stick to top,
     // otherwise change it back to relative
-    if (scrollTop > navOffsetTop + 200) {
+    if (scrollTop > navOffsetTop + 350) {
       $this.addClass("sticky");
     } else {
       $this.removeClass("sticky");
@@ -792,7 +792,7 @@ var NavbarSticky = (function () {
 
     // re-calculate stickyness on scroll
     $(window).on({
-      scroll: function () {
+      scroll: function() {
         init($nav);
       }
     });
@@ -805,7 +805,7 @@ var NavbarSticky = (function () {
 
 ("use strict");
 
-var NegativeMargin = (function () {
+var NegativeMargin = (function() {
   // Variables
 
   var $item = $("[data-negative-margin]");
@@ -827,9 +827,9 @@ var NegativeMargin = (function () {
   // Events
 
   $(window).on({
-    "load resize": function () {
+    "load resize": function() {
       if ($item.length) {
-        $item.each(function () {
+        $item.each(function() {
           init($(this));
         });
       }
@@ -847,7 +847,7 @@ var NegativeMargin = (function () {
 // Single slider
 //
 
-var SingleSlider = (function () {
+var SingleSlider = (function() {
   // Variables
 
   var $sliderContainer = $(".input-slider-container");
@@ -879,7 +879,7 @@ var SingleSlider = (function () {
 
     noUiSlider.create(c, options);
 
-    c.noUiSlider.on("update", function (a, b) {
+    c.noUiSlider.on("update", function(a, b) {
       d.textContent = a[b];
     });
   }
@@ -887,7 +887,7 @@ var SingleSlider = (function () {
   // Events
 
   if ($sliderContainer.length) {
-    $sliderContainer.each(function () {
+    $sliderContainer.each(function() {
       init($(this));
     });
   }
@@ -897,7 +897,7 @@ var SingleSlider = (function () {
 // Range slider
 //
 
-var RangeSlider = (function () {
+var RangeSlider = (function() {
   // Variables
 
   var $sliderContainer = $("#input-slider-range");
@@ -921,7 +921,7 @@ var RangeSlider = (function () {
         max: parseInt(c.getAttribute("data-range-value-max"))
       }
     }),
-      c.noUiSlider.on("update", function (a, b) {
+      c.noUiSlider.on("update", function(a, b) {
         f[b].textContent = a[b];
       });
   }
@@ -929,7 +929,7 @@ var RangeSlider = (function () {
   // Events
 
   if ($sliderContainer.length) {
-    $sliderContainer.each(function () {
+    $sliderContainer.each(function() {
       init($(this));
     });
   }
@@ -941,7 +941,7 @@ var RangeSlider = (function () {
 
 ("use strict");
 
-var Popover = (function () {
+var Popover = (function() {
   // Variables
 
   var $popover = $('[data-toggle="popover"]'),
@@ -967,7 +967,7 @@ var Popover = (function () {
   // Events
 
   if ($popover.length) {
-    $popover.each(function () {
+    $popover.each(function() {
       init($(this));
     });
   }
@@ -979,7 +979,7 @@ var Popover = (function () {
 
 ("use strict");
 
-var Pricing = (function () {
+var Pricing = (function() {
   // Variables
 
   var $pricingContainer = $(".pricing-container"),
@@ -998,7 +998,7 @@ var Pricing = (function () {
       $this.addClass("active");
 
       // Change price values
-      c.each(function () {
+      c.each(function() {
         var new_val = $(this).data("pricing-value");
         var old_val = $(this)
           .find("span.price")
@@ -1016,7 +1016,7 @@ var Pricing = (function () {
 
   if ($pricingContainer.length) {
     $btn.on({
-      click: function () {
+      click: function() {
         init($(this));
       }
     });
@@ -1029,7 +1029,7 @@ var Pricing = (function () {
 
 ("use strict");
 
-var Scrollbar = (function () {
+var Scrollbar = (function() {
   // Variables
 
   var $scrollbar = $(".scrollbar-inner");
@@ -1053,7 +1053,7 @@ var Scrollbar = (function () {
 
 ("use strict");
 
-var ScrollTo = (function () {
+var ScrollTo = (function() {
   //
   // Variables
   //
@@ -1086,7 +1086,7 @@ var ScrollTo = (function () {
   //
 
   if ($scrollTo.length) {
-    $scrollTo.on("click", function (event) {
+    $scrollTo.on("click", function(event) {
       scrollTo($(this));
     });
   }
@@ -1098,7 +1098,7 @@ var ScrollTo = (function () {
 
 ("use strict");
 
-var Select = (function () {
+var Select = (function() {
   //
   // Variables
   //
@@ -1133,12 +1133,12 @@ var Select = (function () {
     if (optionAvatar) {
       output = $(
         '<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' +
-        optionAvatar +
-        '" alt="' +
-        avatar.text +
-        '"></span><span>' +
-        avatar.text +
-        "</span>"
+          optionAvatar +
+          '" alt="' +
+          avatar.text +
+          '"></span><span>' +
+          avatar.text +
+          "</span>"
       );
     } else {
       output = avatar.text;
@@ -1153,7 +1153,7 @@ var Select = (function () {
 
   if ($select.length) {
     // Init selects
-    $select.each(function () {
+    $select.each(function() {
       init($(this));
     });
   }
@@ -1165,7 +1165,7 @@ var Select = (function () {
 
 ("use strict");
 
-var Spotlight = (function () {
+var Spotlight = (function() {
   // Variables
 
   var $spotlight = $(".spotlight");
@@ -1200,9 +1200,9 @@ var Spotlight = (function () {
   // Events
 
   $(window).on({
-    "load resize": function () {
+    "load resize": function() {
       if ($spotlight.length) {
-        $spotlight.each(function () {
+        $spotlight.each(function() {
           init($(this));
         });
       }
@@ -1216,7 +1216,7 @@ var Spotlight = (function () {
 
 ("use strict");
 
-var Sticky = (function () {
+var Sticky = (function() {
   //
   // Variables
   //
@@ -1242,7 +1242,7 @@ var Sticky = (function () {
 
   if ($sticky.length) {
     // Init selects
-    $sticky.each(function () {
+    $sticky.each(function() {
       init($(this));
     });
   }
@@ -1255,7 +1255,7 @@ var Sticky = (function () {
 
 ("use strict");
 
-var WpxSwiper = (function () {
+var WpxSwiper = (function() {
   // Variables
 
   var $swiperContainer = $(".swiper-js-container"),
@@ -1274,8 +1274,8 @@ var WpxSwiper = (function () {
     // Swiper options
 
     var effect = $el.data("swiper-effect")
-      ? $el.data("swiper-effect")
-      : "slide",
+        ? $el.data("swiper-effect")
+        : "slide",
       direction = $el.data("swiper-direction")
         ? $el.data("swiper-direction")
         : "horizontal",
@@ -1384,9 +1384,9 @@ var WpxSwiper = (function () {
   }
 
   // Events
-  $(document).ready(function () {
+  $(document).ready(function() {
     if ($swiperContainer.length) {
-      $swiperContainer.each(function (i, swiperContainer) {
+      $swiperContainer.each(function(i, swiperContainer) {
         init($(swiperContainer));
       });
     }
@@ -1399,7 +1399,7 @@ var WpxSwiper = (function () {
 
 ("use strict");
 
-var Tags = (function () {
+var Tags = (function() {
   //
   // Variables
   //
@@ -1424,7 +1424,7 @@ var Tags = (function () {
 
   if ($tags.length) {
     // Init selects
-    $tags.each(function () {
+    $tags.each(function() {
       init($(this));
     });
   }
@@ -1436,7 +1436,7 @@ var Tags = (function () {
 
 ("use strict");
 
-var Tooltip = (function () {
+var Tooltip = (function() {
   // Variables
 
   var $tooltip = $('[data-toggle="tooltip"]');
@@ -1461,7 +1461,7 @@ var Tooltip = (function () {
 
 ("use strict");
 
-var Typed = (function () {
+var Typed = (function() {
   // Variables
 
   var typed = ".typed",
@@ -1484,10 +1484,10 @@ var Typed = (function () {
     var animation = new Typed(el, options);
 
     inView(el)
-      .on("enter", function () {
+      .on("enter", function() {
         animation.start();
       })
-      .on("exit", function () {
+      .on("exit", function() {
         animation.stop();
       });
   }
@@ -1495,7 +1495,7 @@ var Typed = (function () {
   // Events
 
   if ($typed.length) {
-    $typed.each(function () {
+    $typed.each(function() {
       init($(this));
     });
   }
@@ -1507,7 +1507,7 @@ var Typed = (function () {
 
 ("use strict");
 
-var Wavify = (function () {
+var Wavify = (function() {
   //
   // Variables
   //
@@ -1537,7 +1537,7 @@ var Wavify = (function () {
 
   if ($wavify.length) {
     // Init selects
-    $wavify.each(function () {
+    $wavify.each(function() {
       init($(this));
     });
   }
@@ -1550,8 +1550,8 @@ var Wavify = (function () {
 
 ("use strict");
 
-var addToCompare = (function () {
-  $(".compare-p").click(function () {
+var addToCompare = (function() {
+  $(".compare-p").click(function() {
     if (
       $(this)
         .children("input")
@@ -1569,13 +1569,12 @@ var addToCompare = (function () {
   });
 })();
 
-
 // Product Comparison page
 
-("use strict")
+("use strict");
 
-var stickyCompareHead = (function () {
-  $(window).scroll(function () {
+var stickyCompareHead = (function() {
+  $(window).scroll(function() {
     if ($("#compareHead").hasClass("is_stuck")) {
       console.log("it's STuCK!!!!");
       $(".model-img").addClass("d-none");

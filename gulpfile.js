@@ -15,6 +15,7 @@ var gulp = require("gulp");
 var gulpIf = require("gulp-if");
 var gulpRun = require("gulp-run");
 var gulpUtil = require("gulp-util");
+var gulpConcat = require("gulp-concat");
 var npmDist = require("gulp-npm-dist");
 var postcss = require("gulp-postcss");
 var plumber = require("gulp-plumber");
@@ -51,33 +52,55 @@ var paths = {
   }
 };
 
+// Bundle Js
+gulp.task("bundle:js", function() {
+  return gulp
+    .src([
+      "assets/vendor/jquery/dist/jquery.min.js",
+      "assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "assets/vendor/in-view/dist/in-view.min.js",
+      "assets/vendor/autosize/dist/autosize.min.js",
+      "assets/vendor/swiper/dist/js/swiper.min.js",
+      "assets/vendor/sticky-kit/sticky-kit.min.js",
+      "assets/vendor/select2/dist/js/select2.min.js",
+      "assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js",
+      "assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+      "assets/js/theme.min.js"
+    ])
+    .pipe(concat("bundle.js"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(uglify())
+    .pipe(gulp.dest("dist/assets/js/"));
+});
+
 // Compile SCSS
 
-gulp.task("scss", function () {
-  return gulp
-    .src(paths.src.scss)
-    .pipe(wait(500))
-    .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([require("postcss-flexbugs-fixes")]))
-    .pipe(
-      autoprefixer({
-        browsers: ["> 1%"]
-      })
-    )
-    .pipe(csscomb())
-    .pipe(sourcemaps.write("maps"))
-    .pipe(gulp.dest(paths.src.css))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
+gulp.task("scss", function() {
+  return (
+    gulp
+      .src(paths.src.scss)
+      .pipe(sourcemaps.init())
+      .pipe(sass({ outputStyle: "compact" }).on("error", sass.logError))
+      // .pipe(postcss([require("postcss-flexbugs-fixes")]))
+      .pipe(
+        autoprefixer({
+          browsers: ["> 1%"]
+        })
+      )
+      // .pipe(csscomb())
+      .pipe(sourcemaps.write("maps"))
+      .pipe(gulp.dest(paths.src.css))
+      .pipe(
+        browserSync.reload({
+          stream: true
+        })
+      )
+  );
 });
 
 // Minify CSS
 
-gulp.task("minify:css", function () {
+gulp.task("minify:css", function() {
   return gulp
     .src(paths.src.css + "/theme.css")
     .pipe(sourcemaps.init())
@@ -89,7 +112,7 @@ gulp.task("minify:css", function () {
 
 // Minify JS
 
-gulp.task("minify:js", function (cb) {
+gulp.task("minify:js", function(cb) {
   return gulp
     .src(paths.src.base + "/assets/js/theme.js")
     .pipe(plumber())
@@ -103,7 +126,7 @@ gulp.task("minify:js", function (cb) {
 
 // Live reload
 
-gulp.task("browserSync", function () {
+gulp.task("browserSync", function() {
   browserSync.init({
     server: {
       baseDir: [paths.src.base, paths.base.base]
@@ -113,7 +136,7 @@ gulp.task("browserSync", function () {
 
 // Watch for changes
 
-gulp.task("watch", ["browserSync", "scss"], function () {
+gulp.task("watch", ["browserSync", "scss"], function() {
   gulp.watch(paths.src.scss, ["scss"]);
   gulp.watch(paths.src.js, browserSync.reload);
   gulp.watch(paths.src.html, browserSync.reload);
@@ -121,13 +144,13 @@ gulp.task("watch", ["browserSync", "scss"], function () {
 
 // Clean
 
-gulp.task("clean:dist", function () {
+gulp.task("clean:dist", function() {
   return del.sync(paths.dist.base);
 });
 
 // Copy CSS
 
-gulp.task("copy:css", function () {
+gulp.task("copy:css", function() {
   return gulp
     .src([paths.src.base + "/assets/css/theme.css"])
     .pipe(gulp.dest(paths.dist.base + "/css"));
@@ -141,16 +164,15 @@ gulp.task("copy:img", function() {
     .pipe(gulp.dest(paths.dist.base + "/assets/img/"));
 });
 
- // copy all used html
+// copy all used html
 
 gulp.task("copy:html", function() {
-  return gulp.src([paths.src.base + "*.html"])
-    .pipe(gulp.dest(paths.dist.base));
+  return gulp.src([paths.src.base + "*.html"]).pipe(gulp.dest(paths.dist.base));
 });
 
 // Build
 
-gulp.task("build", function (callback) {
+gulp.task("build", function(callback) {
   runSequence(
     "clean:dist",
     "scss",
@@ -165,6 +187,6 @@ gulp.task("build", function (callback) {
 
 // Default
 
-gulp.task("default", function (callback) {
+gulp.task("default", function(callback) {
   runSequence(["scss", "browserSync", "watch"], callback);
 });
