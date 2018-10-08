@@ -31,14 +31,14 @@
   background: $fadeWhite;
 }
 
-  .warranty-info{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $lightGray;
-  }
-  .customer-info{
-    margin-bottom: 30px;
-  }
+.warranty-info {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightGray;
+}
+.customer-info {
+  margin-bottom: 30px;
+}
 
 // explore product
 .explore-product {
@@ -124,6 +124,32 @@
   }
 }
 
+.filter {
+  margin: 20px 0;
+  display: inline-block;
+  width: 100%;
+  select {
+    display: block;
+  }
+}
+.total-listing{
+  margin-bottom: 20px;
+  display: block;
+  font-size: 1.4rem;
+}
+@include media-breakpoint-up(md) {
+  .filter {
+    display: inline-block;
+    width: auto;
+    select{
+      display: inline-block;
+    }
+  }
+  .total-listing {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
 // Warranty Form
 
 // about
@@ -155,22 +181,22 @@
 }
 
 // compare products
-  .compare-model {
-     font-size: 1rem;
-  }
+.compare-model {
+  font-size: 1rem;
+}
 #compareHead.is_stuck {
   z-index: 10;
   .compare-head {
     border-bottom: 1px solid $lightGray;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
   }
   img {
     display: none;
   }
   .compare-model {
-     padding-bottom: .5rem;
-     font-size: 1.2rem;
-     transition: all .3s linear;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s linear;
   }
 }
 .compare-head {

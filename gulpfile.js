@@ -138,7 +138,7 @@ gulp.task("browserSync", function() {
 
 gulp.task("watch", ["browserSync", "scss"], function() {
   gulp.watch(paths.src.scss, ["scss"]);
-  gulp.watch(paths.src.js, browserSync.reload);
+  // gulp.watch(paths.src.js, browserSync.reload);
   gulp.watch(paths.src.html, browserSync.reload);
 });
 

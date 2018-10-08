@@ -127,6 +127,14 @@
   .compare-p{
     margin-top: 10px;
   }
+  .card-title{
+    .sub{
+      font-size: 1rem;
+      color: $gray;
+      display: block;
+      line-height: 1.9rem
+    }
+  }
 }
 // warranty card
 .warranty-call {

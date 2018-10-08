@@ -1214,6 +1214,14 @@ var Spotlight = (function() {
 // Sticky
 //
 
+// var Sticky = new hcSticky("#element", {
+//   stickTo: "#content"
+// });
+
+// Sticky.update({
+//   top: 20
+// });
+
 ("use strict");
 
 var Sticky = (function() {
@@ -1577,7 +1585,6 @@ var addToCompare = (function() {
       .siblings("label")
       .html("Product Added | " + compare_button);
   });
-
 })();
 
 // Product Comparison page
