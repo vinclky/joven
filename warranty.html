@@ -31,235 +31,160 @@
 
 <body>
   <main>
-    <section class="slice slice-lg warranty-form bg-fadeWhite">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h3 class="heading-title">
-              <div class="pre-head">Support for Homes</div>E-Warranty
-            </h3>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="heading-title">
+            <div class="pre-head">Support for Homes</div>E-Warranty
+          </h3>
+        </div>
+      </div>
+      <form class="">
+        <div class="row customer-info">
+          <h4 class="col-12">Customer Information</h4>
+          <div class="col-md-3 mb-3">
+            <label for="title">Title</label>
+            <select class="custom-select d-block w-100" id="title">
+              <option value="">Your Title</option>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Dr.</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select a title
+            </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="title">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="" value="">
+            <div class="invalid-feedback">
+              Valid name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob">
+            <div class="invalid-feedback">
+              Date of Birth is required.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="gender">Gender</label>
+            <select class="custom-select d-block w-100" id="gender">
+              <option value="">Your Gender</option>
+              <option>Male.</option>
+              <option>Female.</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select a title
+            </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="title">Nationality</label>
+            <input type="text" class="form-control" id="name" placeholder="" value="">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="race">Race</label>
+            <input type="text" class="form-control" id="race">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="email">Email </label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address .
+            </div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Address">
+            <div class="invalid-feedback">
+              Please enter your address.
+            </div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter your City">
+            <div class="invalid-feedback">
+              Please enter your city.
+            </div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter your State">
+            <div class="invalid-feedback">
+              Please enter your State.
+            </div>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="postcode">Postcode</label>
+            <input type="text" class="form-control" id="postcode" placeholder="Enter your Postcode">
+            <div class="invalid-feedback">
+              Please enter your postcode.
+            </div>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="contact">contact Number</label>
+            <input type="text" class="form-control" id="contact" placeholder="Enter your City">
+            <div class="invalid-feedback">
+              Please enter your contact.
+            </div>
           </div>
         </div>
-        <form class="needs-validation" novalidate>
-          <div class="row">
-            <h4 class="col-12">Customer Information</h4>
-            <div class="col-md-3 mb-3">
-              <label for="title">Title</label>
-              <select class="custom-select d-block w-100" id="title" required>
-                <option value="">Your Title</option>
-                <option>Mr.</option>
-                <option>Ms.</option>
-                <option>Dr.</option>
-              </select>
-              <div class="invalid-feedback">
-                Please Select a title
-              </div>
+        <div class="row warranty-info">
+          <h4 class="col-12">Product Information / Warranty Validation</h4>
+          <div class="mb-3 col-md-6">
+            <label for="serial">Serial number</label>
+            <input type="text" class="form-control" id="serial" placeholder="Enter your serial Number">
+            <div class="invalid-feedback">
+              Please enter your Serial number.
             </div>
-            <div class="col-md-5 mb-3">
-              <label for="title">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid name is required.
-              </div>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="wcn">Warranty Card Number</label>
+            <input type="text" class="form-control" id="wcn" placeholder="Enter your Warranty Card Number">
+            <div class="invalid-feedback">
+              Please enter your Warranty Card Number.
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="dob">Date of Birth</label>
-              <input type="date" class="form-control" id="dob" required>
-              <div class="invalid-feedback">
-                Date of Birth is required.
-              </div>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="dop">date of purchase</label>
+            <input type="date" class="form-control" id="dop" placeholder="Enter your date of purchase">
+            <div class="invalid-feedback">
+              Please enter your date of purchase.
             </div>
-            <div class="col-md-3 mb-3">
-              <label for="gender">Gender</label>
-              <select class="custom-select d-block w-100" id="gender" required>
-                <option value="">Your Gender</option>
-                <option>Male.</option>
-                <option>Female.</option>
-              </select>
-              <div class="invalid-feedback">
-                Please Select a title
-              </div>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="purchase_from">purchase area</label>
+            <input type="text" class="form-control" id="purchase_from" placeholder="here did you buy it from">
+            <div class="invalid-feedback">
+              Please enter your purchase area.
             </div>
-            <div class="col-md-5 mb-3">
-              <label for="title">Nationality</label>
-              <input type="text" class="form-control" id="name" placeholder="" value="">
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="race">Race</label>
-              <input type="text" class="form-control" id="race">
-            </div>
+          </div>
 
-            <div class="col-md-6 mb-3">
-              <label for="email">Email </label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address .
-              </div>
-            </div>
-
-            <div class="mb-3 col-md-6">
-              <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="Address" required>
-              <div class="invalid-feedback">
-                Please enter your address.
-              </div>
-            </div>
-
-            <div class="mb-3 col-md-6">
-              <label for="city">City</label></label>
-              <input type="text" class="form-control" id="city" placeholder="Enter your City" required>
-              <div class="invalid-feedback">
-                Please enter your city.
-              </div>
-            </div>
-
-            <div class="mb-3 col-md-6">
-              <label for="state">State</label></label>
-              <input type="text" class="form-control" id="state" placeholder="Enter your State" required>
-              <div class="invalid-feedback">
-                Please enter your State.
-              </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="postcode">Postcode</label></label>
-              <input type="text" class="form-control" id="postcode" placeholder="Enter your Postcode" required>
-              <div class="invalid-feedback">
-                Please enter your postcode.
-              </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="contact">contact Number</label></label>
-              <input type="text" class="form-control" id="contact" placeholder="Enter your City" required>
-              <div class="invalid-feedback">
-                <div class="invalid-feedback">
-                  Please enter your contact.
-                </div>
-              </div>
-            </div>
-
-
-            <h4 class="col-12">Product Information / Warranty Validation</h4>
-
-            <div class="mb-3 col-md-6">
-              <label for="serial">Serial number</label></label>
-              <input type="text" class="form-control" id="serial" placeholder="Enter your serial Number" required>
-              <div class="invalid-feedback">
-                Please enter your Serial number.
-              </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="wcn">Warranty Card Number</label></label>
-              <input type="text" class="form-control" id="wcn" placeholder="Enter your Warranty Card Number" required>
-              <div class="invalid-feedback">
-                <div class="invalid-feedback">
-                  Please enter your Warranty Card Number.
-                </div>
-              </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="dop">date of purchase</label></label>
-              <input type="date" class="form-control" id="dop" placeholder="Enter your date of purchase" required>
-              <div class="invalid-feedback">
-                Please enter your date of purchase.
-              </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="purchase_from">purchase area</label></label>
-              <input type="text" class="form-control" id="purchase_from" placeholder="here did you buy it from" required>
-              <div class="invalid-feedback">
-                <div class="invalid-feedback">
-                  Please enter your purchase area.
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="row submit">
+          <div class="col-12">
             <div class="custom-control custom-checkbox mb-3">
-              <label class="custom-control-label" for="terms">I hearby agree with the terms and conditions of the warranty</label>
+              <label class="custom-control-label" for="terms">I hearby agree with the terms and conditions of the
+                warranty</label>
               <input type="checkbox" class="custom-control-input" id="terms">
             </div>
-            <hr class="mb-4">
+            <button class="mx-0 btn btn-primary btn-lg" type="submit">Submit Warranty</button>
           </div>
-          <button class="mx-0 btn btn-primary btn-lg" type="submit">Submitr Warranty</button>
-        </form>
-    </section>
-
+        </div>
+      </form>
   </main>
-  <footer class="footer-light">
-    <div class="container">
-      <div class="row pt-md">
-        <div class="col-md col-lg-2 offset-md-2">
-          <h6 class="link-label">Product</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#">Instant Water Heaters</a>
-            </li>
-            <li><a href="#">Storage Water Heaters</a>
-            </li>
-            <li><a href="#">Domestic Water Pumps</a>
-            </li>
-            <li><a href="#">Water Purifier</a>
-            </li>
-            <li><a href="#">Celling Fan</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col col-md col-lg-2">
-          <h6 class="link-label">Services</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#">About JOVEN</a>
-            </li>
-            <li><a href="#">News & Promos</a>
-            </li>
-            <li><a href="#">Careers</a>
-            </li>
-            <li><a href="#">Contact Us</a>
-            </li>
-            <li><a href="#">E-warranty</a>
-            </li>
-            <li><a href="#">FAQ</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col col-md col-lg-2">
-          <h6 class="link-label">country</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#">Malaysia</a>
-            </li>
-            <li><a href="#">Thailand</a>
-            </li>
-            <li><a href="#">Singapore</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-8 col-lg-4 order-md-2 d-none d-lg-block align-self-top">
-          <img src="./assets/img/static/awards.png" alt="awards" class="img-fluid">
-        </div>
-      </div>
-    </div>
-    <section class="footer-dark">
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-8 col-md-10 order-md-2 footer-text">
-              <span class="d-md-inline-block">&copy; 2018 Joven SDN BHD</span>
-              <a href="#" class="text-xs">Terms of Use</a>
-              <a href="#" class="text-xs">Privacy Policy</a>
-            </div>
-            <div class="col-4 col-md-2 order-md-1 jovey">
-              <img src="./assets/img/static/jovey.png" class="img-fluid footer-logo">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
+
 
   <!-- Core -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/popper/popper.min.js"></script>
   <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-  <script src="assets/vendor/sticky-kit/sticky-kit.min.js"></script>
-
-  <!-- Page plugins -->
-  <script src="assets/vendor/highlight/js/highlight.min.js"></script>
 
   <!-- Theme JS -->
   <script src="assets/js/theme.js"></script>
