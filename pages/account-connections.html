@@ -15,11 +15,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    <!-- Font Awesome 5 -->
+    <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+    <link href="../assets/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -134,7 +134,7 @@
 
         <!-- Main navbar -->
 
-        <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-dark bg-dark" id="navbar-main">
+        <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-dark bg-dark" id="navbar-main">
             <div class="container">
                 <a class="navbar-brand mr-lg-5" href="../index.html">
                     <img alt="Image placeholder" src="../assets/img/brand/white.png" style="height: 50px;">
@@ -222,6 +222,7 @@
 
 
 
+
     <main>
 
 
@@ -247,31 +248,31 @@
                             </div>
                             <div class="col-auto flex-fill">
                                 <ul class="list-inline row justify-content-lg-end mb-0">
-                                    <li class="list-inline-item col-4 col-sm-4 col-md-auto px-3 mx-0">
+                                    <li class="list-inline-item col-sm-4 col-md-auto px-3 my-2 mx-0">
                                         <span class="badge badge-dot text-white">
                                     <i class="bg-green"></i>Sales
                                 </span>
-                                        <a class="d-block h5 text-white font-weight-bold pl-2" href="#">
+                                        <a class="d-sm-block h5 text-white font-weight-bold pl-2" href="#">
                                     20.5%
-                                    <small class="farfa-angle-up text-success"></small>
+                                    <small class="far fa-angle-up text-success"></small>
                                 </a>
                                     </li>
-                                    <li class="list-inline-item col-4 col-sm-4 col-md-auto px-3 mx-0">
+                                    <li class="list-inline-item col-sm-4 col-md-auto px-3 my-2 mx-0">
                                         <span class="badge badge-dot text-white">
                                     <i class="bg-orange"></i>Tasks
                                 </span>
-                                        <a class="d-block h5 text-white font-weight-bold pl-2" href="#">
+                                        <a class="d-sm-block h5 text-white font-weight-bold pl-2" href="#">
                                     5.7%
-                                    <small class="farfa-angle-up text-warning"></small>
+                                    <small class="far fa-angle-up text-warning"></small>
                                 </a>
                                     </li>
-                                    <li class="list-inline-item col-4 col-sm-4 col-md-auto px-3 mx-0">
+                                    <li class="list-inline-item col-sm-4 col-md-auto px-3 my-2 mx-0">
                                         <span class="badge badge-dot text-white">
                                     <i class="bg-red"></i>Sales
                                 </span>
-                                        <a class="d-block h5 text-white font-weight-bold pl-2" href="#">
+                                        <a class="d-sm-block h5 text-white font-weight-bold pl-2" href="#">
                                     -3.24%
-                                    <small class="farfa-angle-down text-danger"></small>
+                                    <small class="far fa-angle-down text-danger"></small>
                                 </a>
                                     </li>
                                 </ul>
@@ -279,15 +280,15 @@
                         </div>
                         <!-- Account navigation -->
                         <div class="d-flex">
-                            <a href="account-profile-public.html" class="btn btn-icon btn-group-nav shadow btn-secondary d-none d-md-block">
+                            <a href="account-profile-public.html" class="btn btn-icon btn-group-nav shadow btn-secondary">
                                 <span class="btn-inner--icon"><i class="fas fa-user"></i></span>
                                 <span class="btn-inner--text d-none d-md-inline-block">My Profile</span>
                             </a>
                             <div class="btn-group btn-group-nav shadow ml-auto" role="group" aria-label="Basic example">
                                 <div class="btn-group" role="group">
-                                    <button id="btn-group-boards" type="button" class="btn btn-secondary btn-icon dropdown-toggle" data-toggle="dropdown" data-offset="0 8" aria-haspopup="true" aria-expanded="false">
+                                    <button id="btn-group-boards" type="button" class="btn btn-secondary btn-icon dropdown-toggle" data-toggle="dropdown" data-offset="0,8" aria-haspopup="true" aria-expanded="false">
                                         <span class="btn-inner--icon"><i class="fas fa-chart-line"></i></span>
-                                        <span class="btn-inner--text d-none d-md-inline-block">Boards</span>
+                                        <span class="btn-inner--text d-none d-sm-inline-block">Boards</span>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" aria-labelledby="btn-group-boards">
                                         <a class="dropdown-item" href="account-overview.html">Overview</a>
@@ -297,9 +298,9 @@
                                     </div>
                                 </div>
                                 <div class="btn-group" role="group">
-                                    <button id="btn-group-settings" type="button" class="btn btn-secondary btn-icon dropdown-toggle" data-toggle="dropdown" data-offset="0 8" aria-haspopup="true" aria-expanded="false">
+                                    <button id="btn-group-settings" type="button" class="btn btn-secondary btn-icon dropdown-toggle" data-toggle="dropdown" data-offset="0,8" aria-haspopup="true" aria-expanded="false">
                                         <span class="btn-inner--icon"><i class="fas fa-sliders-h"></i></span>
-                                        <span class="btn-inner--text d-none d-md-inline-block">Settings</span>
+                                        <span class="btn-inner--text d-none d-sm-inline-block">Settings</span>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" aria-labelledby="btn-group-settings">
                                         <a class="dropdown-item" href="account-profile.html">Profile</a>
@@ -314,6 +315,7 @@
                 </div>
             </div>
         </header>
+
 
 
         <section class="slice bg-secondary">
@@ -796,15 +798,16 @@
 
 
     <!-- Core -->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/vendor/popper/popper.min.js"></script>
-    <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../assets/vendor/sticky-kit/sticky-kit.min.js"></script>
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/in-view/dist/in-view.min.js"></script>
 
 
 
     <!-- Theme JS -->
+
     <script src="../assets/js/theme.min.js"></script>
+
 
 </body>
 

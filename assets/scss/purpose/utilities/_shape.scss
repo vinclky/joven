@@ -30,10 +30,10 @@
 
 @each $color, $value in $colors {
     .shape-fill-#{$color}  {
-        fill: $value;
+        fill: $value !important;
     }
     .shape-stroke-#{$color}  {
-        stroke: $value;
+        stroke: $value !important;
     }
 }
 

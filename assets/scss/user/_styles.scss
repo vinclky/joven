@@ -35,9 +35,9 @@ body {
     transition-duration: 0.3s;
     transition-property: left, visibility, opacity;
   }
-  .body-backdrop.backdrop-canvas {
+  .body-backdrop.backdrop-offCanvas {
     position: fixed;
-    z-index: 1030;
+    z-index: 100;
   }
 }
 
@@ -51,6 +51,12 @@ body {
     font-weight: bold;
   }
 }
+
+.pagination{
+  margin: 20px 0;
+}
+
+
 
 
 

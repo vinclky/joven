@@ -95,7 +95,7 @@
         }
     }
 
-    .navbar:not(.is_stuck):not(.navbar-collapsed) {
+    .navbar:not(.sticky):not(.navbar-collapsed) {
         background-color: transparent !important;
         border: 0;
         box-shadow: none;
@@ -125,9 +125,19 @@
 }
 
 // Sticky navbar
-.navbar-fixed-top.is_stuck {
-    z-index: $zindex-fixed;
-    box-shadow: $navbar-fixed-box-shadow;
+.navbar-sticky {
+    position: -webkit-sticky;
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: -100px;
+        transform: translateY(100px);
+        z-index: $zindex-fixed;
+        border-top: 0;
+        @include transition($transition-base);
+    }
 }
 
 // Top navbar

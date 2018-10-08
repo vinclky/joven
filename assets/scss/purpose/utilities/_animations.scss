@@ -2,14 +2,14 @@
 	.animate-this {
 		position: relative;
 		top: 0;
-		will-change: transform;
+		transform: translateY(0);
 		@include transition($transition-base);
 	}
 }
 
 [data-animate-hover="1"] {
 	&:hover .animate-this {
-		top: -1rem;
+		transform: translateY(-1rem);
 		@include box-shadow($box-shadow);
 	}
 }
@@ -36,7 +36,6 @@
 		opacity: 0;
 		animation: hide_item .2s ease forwards;
 	    animation-delay: .5s;
-	    will-change: transform;
 	}
 
 	&:hover {
@@ -63,23 +62,23 @@
 @keyframes show_item {
     from {
         opacity: 0;
-        transform: translateY(300px); 
+        transform: translateY(300px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0); 
-    } 
+        transform: translateY(0);
+    }
 }
 
 @keyframes hide_item {
     0% {
         opacity: 1;
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(300px); 
-    } 
+        transform: translateY(300px);
+    }
 }

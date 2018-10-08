@@ -86,7 +86,7 @@
     box-shadow: 0 6px 30px rgba(0,0,0,0.2);
   }
   .heading {
-    font-weight: bold;
+
   }
   .card-title {
     color: $lightBlue;
@@ -97,6 +97,9 @@
   .card-body {
     padding: 1.2rem;
     font-size: 0.9rem;
+    .text-white *{
+      color: $white;
+    }
   }
 }
 .card-video {
@@ -123,6 +126,14 @@
   }
   .compare-p{
     margin-top: 10px;
+  }
+  .card-title{
+    .sub{
+      font-size: 1rem;
+      color: $gray;
+      display: block;
+      line-height: 1.9rem
+    }
   }
 }
 // warranty card
@@ -223,8 +234,8 @@
       }
     }
     .social-share {
-      i {
-        font-size: 1.4rem;
+      a {
+        font-size: 1.8rem;
         margin-right: 9px;
         color: $primary;
       }
@@ -242,13 +253,12 @@
 .nav-pills{
   .nav-item{
     .nav-link{
-      border: none;
       font-size: 1rem;
+      border: none;
       font-family: $font-family-alt;
       &.active{
-        border-top: 3px solid $lightBlue;
-        color: $lightBlue;
-        background-color: $white;
+        color: $white;
+        background-color: $lightBlue;
       }
     }
   }
@@ -264,9 +274,16 @@
   }
   .hl-img{
     z-index: 100;
+    padding: 0;
+    img{
+      width: 100%;
+    }
   }
   .hl-text{
-    height: 100%;
+    padding: 2rem 0;
+    &.text-white *{
+      color: $white;
+    }
   }
   .i-slide{
     min-height: 670 px;
@@ -287,6 +304,9 @@
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
+     *{
+           color: $white;
+     }
   }
 }
 
@@ -363,6 +383,3 @@
     .navbar-search{
       position: fixed;
     }
-
-
-    // product Comparison

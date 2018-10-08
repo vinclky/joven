@@ -15,11 +15,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    <!-- Font Awesome 5 -->
+    <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+    <link href="../assets/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -134,7 +134,7 @@
 
         <!-- Main navbar -->
 
-        <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-transparent navbar-dark bg-dark" id="navbar-main">
+        <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-transparent navbar-dark bg-dark" id="navbar-main">
             <div class="container">
                 <a class="navbar-brand mr-lg-5" href="../index.html">
                     <img alt="Image placeholder" src="../assets/img/brand/white.png" style="height: 50px;">
@@ -222,6 +222,7 @@
 
 
 
+
     <main>
 
 
@@ -279,9 +280,7 @@
         </section>
 
         <section>
-            <div id="google-map">
-                <div id="map_canvas" class="map-canvas"></div>
-            </div>
+            <div id="map-canvas" class="map-canvas" data-lat="37.7767964" data-lng="-122.4187928"></div>
         </section>
 
     </main>
@@ -368,21 +367,22 @@
 
 
     <!-- Core -->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/vendor/popper/popper.min.js"></script>
-    <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../assets/vendor/sticky-kit/sticky-kit.min.js"></script>
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/in-view/dist/in-view.min.js"></script>
 
 
     <!-- Page plugins -->
     <!-- Google maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuyKngB9VC3zgY_uEB-DKL9BKYMekbeY&callback=initMap"></script>
-    <script src="../assets/js/maps/google-maps-primary.js"></script>
-    <script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuyKngB9VC3zgY_uEB-DKL9BKYMekbeY"></script>
+    <script src="../assets/vendor/autosize/dist/autosize.min.js"></script>
+
 
 
     <!-- Theme JS -->
+
     <script src="../assets/js/theme.min.js"></script>
+
 
 </body>
 

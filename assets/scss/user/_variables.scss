@@ -26,6 +26,7 @@ $theme-colors: map-merge((
 
 $font-family-base: 'Roboto', sans-serif;
 $font-family-alt: 'exo', sans-serif;
+$headings-font-family:  $font-family-alt;
 
 $navbar-brand-padding-y: 0;
 $navbar-brand-padding-x: .75rem;
@@ -37,3 +38,11 @@ $breadcrumb-padding-x:              .3rem !default !default;
 $breadcrumb-item-padding:           .3rem !default !default;
 
 $breadcrumb-margin-bottom:          .5rem !default !default;
+
+// breakpoint container max width
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 992px,
+  xl: 1200px
+) !default;

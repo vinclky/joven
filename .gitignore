@@ -22,9 +22,9 @@ twbsconfig.yml
 
 # Folders to ignore
 .vscode
-build_ref
+z-reference
 pages
-mockups
+z-mockups
 node_modules
 assets/img/backgrounds
 assets/img/prv
