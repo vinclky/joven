@@ -15,11 +15,15 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    <!-- Font Awesome 5 -->
+    <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Page plugins -->
+    <link type="text/css" href="../assets/vendor/select2/dist/css/select2.min.css" rel="stylesheet">
+
+
 
     <!-- Theme CSS -->
-    <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+    <link href="../assets/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -134,7 +138,7 @@
 
         <!-- Main navbar -->
 
-        <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-dark bg-dark" id="navbar-main">
+        <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-dark bg-dark" id="navbar-main">
             <div class="container">
                 <a class="navbar-brand mr-lg-5" href="../index.html">
                     <img alt="Image placeholder" src="../assets/img/brand/white.png" style="height: 50px;">
@@ -222,6 +226,7 @@
 
 
 
+
     <main>
 
 
@@ -250,19 +255,19 @@
                             <div class="btn-group btn-group-nav shadow" role="group" aria-label="Basic example">
                                 <div class="btn-group" role="group">
                                     <a href="shop-cart.html" class="btn btn-secondary btn-icon">
-                                        <span class="btn-inner--icon"><i class="fas fa-chart-line"></i></span>
+                                        <span class="btn-inner--icon"><i class="fas fa-shopping-cart"></i></span>
                                         <span class="btn-inner--text d-none d-md-inline-block">Cart</span>
                                     </a>
                                     <a href="shop-checkout-customer.html" class="btn btn-secondary btn-icon active">
-                                        <span class="btn-inner--icon"><i class="fas fa-chart-line"></i></span>
+                                        <span class="btn-inner--icon"><i class="fas fa-user"></i></span>
                                         <span class="btn-inner--text d-none d-md-inline-block">Customer</span>
                                     </a>
                                     <a href="shop-checkout-shipping.html" class="btn btn-secondary btn-icon">
-                                        <span class="btn-inner--icon"><i class="fas fa-chart-line"></i></span>
+                                        <span class="btn-inner--icon"><i class="fas fa-truck"></i></span>
                                         <span class="btn-inner--text d-none d-md-inline-block">Shipping</span>
                                     </a>
                                     <a href="shop-checkout-payment.html" class="btn btn-secondary btn-icon">
-                                        <span class="btn-inner--icon"><i class="fas fa-cart"></i></span>
+                                        <span class="btn-inner--icon"><i class="fas fa-credit-card"></i></span>
                                         <span class="btn-inner--text d-none d-md-inline-block">Payment</span>
                                     </a>
                                 </div>
@@ -272,6 +277,7 @@
                 </div>
             </div>
         </header>
+
 
 
         <section class="slice slice-lg">
@@ -314,7 +320,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Country</label>
-                                        <select class="selectpicker" title="Country">
+                                        <select class="form-control" data-toggle="select" title="Country">
                                             <option selected>Select your country</option>
                                             <option value="1">Bulgaria</option>
                                             <option value="2">Croatia</option>
@@ -329,7 +335,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-control-label">City</label>
-                                        <select class="selectpicker" title="City">
+                                        <select class="form-control" data-toggle="select" title="City">
                                             <option selected>Select your city</option>
                                             <option value="1">Bucharest</option>
                                             <option value="2">Bacau</option>
@@ -490,6 +496,7 @@
             </div>
         </section>
 
+
     </main>
 
 
@@ -574,18 +581,21 @@
 
 
     <!-- Core -->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/vendor/popper/popper.min.js"></script>
-    <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../assets/vendor/sticky-kit/sticky-kit.min.js"></script>
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/in-view/dist/in-view.min.js"></script>
 
 
     <!-- Page plugins -->
-    <script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+    <script src="../assets/vendor/select2/dist/js/select2.min.js"></script>
+
 
 
     <!-- Theme JS -->
+
     <script src="../assets/js/theme.min.js"></script>
+
 
 </body>
 

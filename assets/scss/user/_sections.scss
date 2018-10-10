@@ -31,6 +31,15 @@
   background: $fadeWhite;
 }
 
+.warranty-info {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightGray;
+}
+.customer-info {
+  margin-bottom: 30px;
+}
+
 // explore product
 .explore-product {
   overflow: hidden;
@@ -115,6 +124,32 @@
   }
 }
 
+.filter {
+  margin: 20px 0;
+  display: inline-block;
+  width: 100%;
+  select {
+    display: block;
+  }
+}
+.total-listing{
+  margin-bottom: 20px;
+  display: block;
+  font-size: 1.4rem;
+}
+@include media-breakpoint-up(md) {
+  .filter {
+    display: inline-block;
+    width: auto;
+    select{
+      display: inline-block;
+    }
+  }
+  .total-listing {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
 // Warranty Form
 
 // about
@@ -146,21 +181,30 @@
 }
 
 // compare products
-
+.compare-model {
+  font-size: 1rem;
+}
 #compareHead.is_stuck {
   z-index: 10;
-  .compare-head{
-    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+  .compare-head {
+    border-bottom: 1px solid $lightGray;
+    padding-top: 0.5rem;
+  }
+  img {
+    display: none;
+  }
+  .compare-model {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s linear;
   }
 }
-.compare-head{
-    background: $white;
+.compare-head {
+  background: $white;
 }
-.compare-item {
-  // border-top: 1px solid $lightGray;
-}
-.model-name{
-  padding: .5rem 0;
+
+.model-name {
+  padding: 0.5rem 0;
 }
 .compare-title {
   margin-top: 1rem;
@@ -172,13 +216,26 @@
 .compare-info {
   background: $fadeWhite;
   z-index: -2;
-        border-top: 1px solid $lightGray;
+  border-top: 1px solid $lightGray;
   div {
     padding: 0.75rem;
     // border-bottom: 1px solid $lightGray
   }
 }
-.compare-info:first-of-type{
-      border-top: 1px solid $lightBlue;
+.compare-info:first-of-type {
+  border-top: 1px solid $lightBlue;
 }
 
+.specs {
+  .bg-img-holder {
+    padding: 0;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

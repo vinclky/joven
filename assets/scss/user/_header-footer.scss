@@ -1,15 +1,25 @@
 // header
+.navbar-sticky.sticky {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 .navbar-main {
   background: $white;
-}
-.navbar-brand {
-  margin: 0 0.75rem;
+  padding: 0;
+  .navbar-brand {
+    margin: 0 0.75rem;
+  }
 }
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 22px 0.6rem;
+  padding: 18px 0.6rem;
   height: 100%;
   display: block;
+  text-transform: uppercase;
+  font-size: 1rem;
   border: none;
+  &:hover, &.active{
+    color: $lightBlue;
+  }
 }
 .navbar-main .offcanvas-collapse {
   .list-group {
@@ -26,6 +36,7 @@
     width: 70%;
   }
 }
+
 // backgrounds
 .bg-fadeWhite {
   background-color: $fadeWhite;
@@ -42,7 +53,6 @@
       padding: 1rem;
       background-color: $primary;
       color: $white;
-
       // padding: 0.75rem;
       font-weight: bold;
       border-bottom-right-radius: 2rem;
@@ -52,8 +62,10 @@
 // Country
 .country-select {
   position: relative;
+
   .dropdown-menu {
     padding: 0;
+    margin: 0;
   }
   .dropdown-toggle {
     background: $fadeWhite;
@@ -108,6 +120,9 @@
     margin-left: 35px;
     line-height: 1.4;
   }
+}
+.footer-dark {
+  background-color: $primary;
 }
 .footer-bottom {
   padding-top: 15px;

@@ -9,6 +9,7 @@
 
 	img {
 		width: $icon-size;
+		height: $icon-size;
 	}
 }
 
@@ -27,6 +28,7 @@
 
 	img {
 		width: $icon-size-xl;
+		height: $icon-size-xl;
 	}
 }
 
@@ -44,6 +46,7 @@
 
 	img {
 		width: $icon-size-lg;
+		height: $icon-size-lg;
 	}
 }
 
@@ -61,6 +64,7 @@
 
 	img {
 		width: $icon-size-sm;
+		height: $icon-size-sm;
 	}
 }
 
@@ -76,7 +80,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: $border-radius;
-	
+
 	i, svg {
 		font-size: 1.125rem;
 	}
@@ -103,7 +107,7 @@
 	.icon-outline-#{$color} {
 		@include icon-outline-variant($icon-border-width, color($color));
 	}
-} 
+}
 
 // Icon action buttons
 
