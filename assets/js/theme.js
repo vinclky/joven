@@ -622,6 +622,7 @@ var Layout = (function() {
               target +
               '" />'
           );
+        $(target).find('input').focus();
         break;
 
       case "search-close":
